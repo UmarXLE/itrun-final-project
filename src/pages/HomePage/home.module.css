@@ -1,0 +1,93 @@
+
+.charityPosts {
+    display: flex;
+    color: white;
+
+}
+
+.charityPostsPoster {
+    width: 60%;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    padding-left: 40px;
+    display: flex;
+    aspect-ratio: 2/1;
+    background-color: bisque;
+    background: url('../../../public/img/main-poster.jpeg')no-repeat;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.charityPostsMiniPosters {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+.wrapper {
+    width: 100%;
+    /* margin: auto; */
+}
+
+.charityItem {
+    background: url('../../../public/img/item.jpeg')no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    border: 1px solid white;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* padding-left: 40px; */
+    /* padding: 0 0 20px 20px; */
+    display: flex;
+    padding: 20px;
+}
+
+.donationBtn {
+    color: white;
+    background-color: coral;
+    padding: 8px 70px;
+    border-radius: 2px;
+    border: none;
+    letter-spacing: 2px;
+    outline: none;
+    font-weight: 500;
+    display: none;
+    text-transform: uppercase;
+
+}
+
+.charityPostsPoster:hover .donationBtn{
+    display: block;
+    transition: 0.25s ease all;
+}
+
+.charityItem:hover .donationBtn{
+    display: block;
+    transition: 0.25s ease all;
+}
+
+
+.charityPostsPoster p {
+    font-size: 16px;
+    opacity: 80%;
+    font-weight: 700;
+}
+
+.charityPostsPoster h2 {
+    font-size: 28px;
+    font-weight: 700  ;
+    margin-bottom: 10px;
+}
+
+.charityItem p{
+    font-size: 16px;
+    opacity: 80%;;
+    font-weight: 700;
+}
+
+.charityItem h2 {
+    font-size: 16px;
+
+}

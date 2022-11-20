@@ -1,0 +1,41 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.wrapperMain {
+    background-color: #eaeaea;
+}
+
+.infoTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    background-color: #49516f;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    
+}
+
+.title{
+    font-size: 28px;  
+    font-weight: 700;
+
+}
+
+
+
+.wrapperNews {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+}

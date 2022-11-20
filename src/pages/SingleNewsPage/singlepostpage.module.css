@@ -1,0 +1,28 @@
+.newsWrapper  {
+    display: flex;
+}
+
+.imgWrapper {
+    width: 40%;
+
+}
+.infoWrapper {
+    width: 55%;
+    margin-left: 5%;
+    
+}
+
+.imgWrapper img{
+    width: 100%;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 100px auto;
+}
+
+
+.btnWrapper {
+    display: flex;
+    justify-content: end;
+}

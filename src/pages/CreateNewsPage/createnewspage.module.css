@@ -1,0 +1,11 @@
+.wrapper {
+    margin-top: 50px;
+}
+
+.form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}

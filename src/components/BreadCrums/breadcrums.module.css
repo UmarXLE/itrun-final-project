@@ -1,0 +1,26 @@
+
+
+.wrapper {
+    /* width: 100%;
+    aspect-ratio: 3/1;
+    background: url('../../../public/img/breadcrums.jpg')no-repeat;
+    background-size: 100%; */
+    aspect-ratio: 5/1.1; /* соотношение сторон */
+    background-image: url('../../../public/img/breadcrums.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+
+
+
+.title {
+    
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    margin:auto;
+    font-size: 50px;
+}

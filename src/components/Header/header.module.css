@@ -1,21 +1,33 @@
 header {
     width: 100%;
     background: white;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.68); 
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* margin: 20px 80px; */
+    /* position: fixed; */
+    /* padding-bottom: 100px; */
+    margin-bottom: 20px;
+    /* margin-bottom: 100px; */
 }
 
 .nav a {
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    color:black;
+    font-weight: 600;
     
 }
-
+nav {
+    display: flex;
+}
 .nav a:not(:last-child){
-    margin-right: 30px;
+    margin-right: 40px;
+}
+
+.active:active {
+    color: red;
 }

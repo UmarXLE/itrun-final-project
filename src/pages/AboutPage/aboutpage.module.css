@@ -1,0 +1,101 @@
+.marquee {
+    padding: 20px 0;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.donationFind {
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+
+}
+
+.titleDonation {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+}
+
+.lineDonation {
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    height: 2px;
+    background-color: rgb(114, 111, 111);
+    margin: 15px 0;
+}
+
+.textDonation {
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+.btnDonation {
+    color: white;
+    background: rgb(240, 139, 29);
+    text-decoration: none;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+
+
+.joinUs {
+    margin: 50px 0;
+}
+.joinText {
+    font-size: 20px;
+    color: white;
+
+}
+
+.joinFront  {
+    background-color: khaki;
+    padding: 30px;
+    width: 40%;
+    z-index: 100;
+    margin-top: -100px;
+    text-align: center;
+}
+
+
+.joinBack {
+    z-index: -2;
+}
+
+.cardAboutWrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardAbout {
+    position: relative;
+    width: 25%;
+    transition: 0.23s;
+    border: 2px solid white;
+}
+
+
+
+.cardAboutText {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    color: white;
+    background-color: rgb(114, 111, 111,2);
+
+}
+
+.cardAbout:hover .cardAboutText{
+    display: block;
+
+}
