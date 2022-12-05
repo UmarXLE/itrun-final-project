@@ -1,0 +1,17 @@
+.wrapper {
+    width: 90%;
+    margin:0 auto;
+    padding: 40px 0;
+    border-top: 1px solid rgb(133, 127, 127);
+    margin-top: 50px;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    margin: 0 10px;
+}

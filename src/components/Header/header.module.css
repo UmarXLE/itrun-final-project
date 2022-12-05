@@ -1,3 +1,9 @@
+.headerWrapper {
+    position: fixed;
+    margin-bottom: 50px;
+    width: 100%;
+    z-index: 100;
+}
 header {
     width: 100%;
     background: white;
@@ -7,11 +13,11 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* margin: 20px 80px; */
     /* position: fixed; */
+    z-index: 1000;
     /* padding-bottom: 100px; */
-    margin-bottom: 20px;
-    /* margin-bottom: 100px; */
+    /* margin-bottom:50px ; */
+
 }
 
 .nav a {
@@ -30,4 +36,28 @@ nav {
 
 .active:active {
     color: red;
+}
+
+
+.nameUser {
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid green;
+    color: green;
+    padding-bottom: 1px;
+}
+
+.user {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.logout {
+    background: none;
+    color: red; 
+    border: none;  
+    margin-top: 3px; 
+    font-size: 16px;
+    cursor: pointer;
 }

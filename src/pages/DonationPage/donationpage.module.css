@@ -1,0 +1,16 @@
+.wrapperDonations {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filterWrapper {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

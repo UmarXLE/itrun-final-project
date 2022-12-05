@@ -34,7 +34,8 @@ const Login = () => {
                 setLogin(res.data.user.login)
                 setOpenSucces(true)
                 // здесь будет проищсходит суета с редакс
-
+                setEmail('')
+                setPassword('')
                 dispatch(loginSuccess(res.data.user))
             })
             .catch(error => {
@@ -58,7 +59,7 @@ const Login = () => {
             size="small"
             aria-label="close"
             color="inherit"
-            onClick={handleClose}
+            onClick={()=>handleClose()}
           >
             Закрыть 
           </IconButton>

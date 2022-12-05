@@ -3,7 +3,7 @@ import BreadCrums from '../../components/BreadCrums/BreadCrums';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
 import styles from './profile.module.css'
-
+import Footer from '../../components/Footer/Footer'
 
 const ProfilePage = () => {
     return (
@@ -19,7 +19,7 @@ const ProfilePage = () => {
             </div>
 
 
-            
+            <Footer />
         </div>
     );
 };

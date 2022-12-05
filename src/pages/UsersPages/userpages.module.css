@@ -1,0 +1,19 @@
+.wrapperUsers {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.searchBlog {
+    /* width: 85%; */
+    /* margin: 0 aut
+    o;
+     */
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+}
+

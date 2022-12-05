@@ -1,5 +1,5 @@
 import { Breadcrumbs } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './createnewspage.module.css'
 import BreadCrums from '../../components/BreadCrums/BreadCrums';
 import TextField from '@mui/material/TextField';
@@ -8,14 +8,29 @@ import axios from 'axios';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
-
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
+import { useSelector } from 'react-redux';
 
 const CreateNewsPage = () => {
 
     const [img , setImg] = useState('')
     const [title , setTitle] = useState('')
-    const [descr , setDescr]  = useState('')
+    const [descr , setDescr]  = useState('') 
     const [open, setOpen] = useState(false);
+    const [statusUser , setStatusUser] = useState('guest')
+    const navigate = useNavigate()
+    const {id} = useParams()
+    const user = useSelector(state => state.user.currentUser)
+    const  create_ad = new Date().toString()
+    console.log(create_ad)
+
+    useEffect(()=>{
+      if(!user){
+        navigate('/profil')
+      }
+    },[])
 
 
     const createNews = (e) => {
@@ -23,14 +38,15 @@ const CreateNewsPage = () => {
         axios.post('http://localhost:3009/posts',{
             img,
             title,
-            descr
+            descr,
+            statusUser,
+            create_ad
         }).then(res => {
             console.log(res)
             setImg('')
             setTitle('')
             setDescr('')
             setOpen(true);
-
         })
     }
 
@@ -38,11 +54,13 @@ const CreateNewsPage = () => {
         setOpen(false)
     }
 
+    
+
+    
+
     const action = (
         <React.Fragment>
-          <Button color="secondary" size="small" onClick={createNews}>
-            UNDO
-          </Button>
+
           <IconButton
             size="small"
             aria-label="close"
@@ -100,12 +118,13 @@ const CreateNewsPage = () => {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        message="Note archived"
+        message={<p style={{'color':'green'}}>News success create ! </p>}
         action={action}
       />
 
             </form>
             </div>  
+            <Footer />
         </div>
     );
 };

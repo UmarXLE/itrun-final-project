@@ -1,0 +1,39 @@
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+
+}
+
+.usersWrapper {
+    display: flex;
+    /* width: 90%; */
+    justify-content: center;
+    /* margin: 100px 0; */
+    flex-wrap: wrap;
+}
+
+.wrapperBg {
+    /* background-color: black; */
+}
+
+.wrapper a {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title {
+    /* color: white; */
+}
+
+.info {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}

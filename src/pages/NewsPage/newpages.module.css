@@ -2,5 +2,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    margin: 100px auto;
+    margin: 50px auto;
+    justify-content: center;
+    /* padding-top: 100px; */
+}
+
+.filterNews {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.titleFilter {
+    font-size: 20px;
 }

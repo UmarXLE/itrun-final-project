@@ -13,6 +13,8 @@ const Register = () => {
     const [password , setPassword ] = useState('')
     const [login , setLogin ] = useState('') //грубо иммя не обязательное поле 
     const [open, setOpen] = useState(false);
+    const [photo , setPhoto ] = useState('')
+    const [favorites , setFavorites ] = useState([])
 
 
     const register = (e) => {
@@ -20,7 +22,9 @@ const Register = () => {
         const newUser = {
             email,
             password,
-            login
+            login,
+            photo,
+            favorites
         }
 
         axios.post(`http://localhost:3009/register`,newUser)
@@ -30,6 +34,7 @@ const Register = () => {
                 setEmail('')
                 setPassword('')
                 setLogin('')
+                setPhoto('')
             })
             .catch(error => console.log(error))
     }
@@ -77,12 +82,21 @@ const Register = () => {
 
             <TextField 
             margin="dense"
-            placeholder='Login or Name'
+            placeholder='Name'
             type="text" 
             value={login}
             onChange={(e)=>setLogin(e.target.value)}
             />
 
+            <TextField 
+            margin="dense"
+            placeholder='Photo URL'
+            type="text" 
+            value={photo}
+            onChange={(e)=>setPhoto(e.target.value)}
+            />
+
+          
           <Button 
          onClick={register} 
          style={{'marginTop':'10px','padding':'12px'}} 

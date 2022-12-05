@@ -1,0 +1,14 @@
+/* .wrapper {
+    margin-top: 100px;
+} */
+/* .mt100{
+    margin-top: 100px;
+} */
+
+.wrapperDontaions {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

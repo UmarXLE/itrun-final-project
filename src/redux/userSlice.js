@@ -14,8 +14,10 @@ const userSlice = createSlice({
             state.currentUser = action.payload
             // payload полезные данные логин пароль и тд 
         },
-        loginFailed: (state) => {}
-
+        loginFailed: (state) => {},
+        logout : (state) => {
+            state.currentUser = null
+        }
     }
  })
 
@@ -23,6 +25,6 @@ const userSlice = createSlice({
 
  export default userSlice.reducer
 
- export const { loginSuccess , loginStart , loginFailed } = userSlice.actions
+ export const { loginSuccess , loginStart , loginFailed , logout } = userSlice.actions
 
 
