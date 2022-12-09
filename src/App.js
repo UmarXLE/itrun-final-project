@@ -11,6 +11,7 @@ import HalpingAnimals from './pages/HalpingAnimals/HalpingAnimals';
 import HomePage from './pages/HomePage/HomePage';
 import NaturalDisasters from './pages/NaturalDisasters/NaturalDisasters';
 import NewsPage from './pages/NewsPage/NewsPage'
+import PaymentPage from './pages/PaymentPage/PaymentPage';
 import PoachingPage from './pages/PoachingPage/PoachingPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import ProfilUserPage from './pages/ProfilUserPage/ProfilUserPage';
@@ -44,10 +45,15 @@ function App() {
   <Route path='/war' element={<WarPage/>}/>
   <Route path='/elderly' element={<ElderlyPage/>}/>
   <Route path='/favoritenews' element={<FavoriteNewsPage/>}/>
-  <Route path='/profiluser' element={<ProfilUserPage/>}/>
+  <Route path='/profiluser/:id' element={<ProfilUserPage/>}/>
   <Route path='/createdonation' element={<CreateDonationPage/>}/>
   <Route path='/donations/:id' element={<SingleDonationPage/>}/>
+  <Route path='/payment/:id' element={<PaymentPage />}/>
 </Routes>
+
+
+   
+
 
 </div>
 

@@ -12,14 +12,26 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-
+import PaginationComponent from '../../components/Pagination/Pagination'
 
 const NewsPage = () => {
-
+    
     const navigate = useNavigate()
     const [ posts, setPosts ] = useState([])
     const [loading , setLoading ] = useState(true)
     const [sorted , setSorted ]  = useState('new')
+    const [ currentPage , setCurrentPage ] = useState(1)
+    const [ perPage] = useState(3)
+
+
+    const lastIndex = currentPage * perPage
+    const firstIndex = lastIndex - perPage 
+    const currentPageNow = posts.slice(firstIndex , lastIndex)
+
+    const paginate = (pageNumber ) => setCurrentPage(pageNumber)
+    const nextPage = () => setCurrentPage(prev => prev + 1)
+    const prevPage = () => setCurrentPage(prev => prev -1)
+
     
     useEffect(()=> {
         axios.get(`http://localhost:3009/posts`)
@@ -117,7 +129,7 @@ const NewsPage = () => {
                         <>
 
                           {
-                                posts.map(post => {
+                                currentPageNow.map(post => {
                                     return <NewsItem 
                                     key = {post.id}
                                     id={post.id}
@@ -129,6 +141,7 @@ const NewsPage = () => {
                                     />
                                 })
                             }
+
                         </>
                     )
                 }
@@ -137,9 +150,19 @@ const NewsPage = () => {
 
             
 
-
+           
             </div>
 
+            <div className ={styles.paginationWrapper}>
+            <button onClick = {()=>prevPage()}>prev</button>
+                <PaginationComponent 
+                 perPage = {perPage} 
+                total = {posts.length}
+                paginate = { paginate}
+                />
+                <button onClick = {()=>nextPage()}>next</button>
+            </div>
+            
             <Footer />
         </div>
     );

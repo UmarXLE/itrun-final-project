@@ -16,6 +16,8 @@ const NewsContent = ({news ,setNews}) => {
             .then(res => setNews(res.data))
     },[])
 
+    console.log(news)
+
     
     return (
         <div className={styles.wrapperMain}>
@@ -39,6 +41,8 @@ const NewsContent = ({news ,setNews}) => {
                             news.map(news => {
                                 return <NewsItem 
                                 styles = {styles}
+                                id = {news.id}
+                                key = {news.id}
                                 img = {news.img}
                                 title = {news.title}
                                 descr = {news.descr}

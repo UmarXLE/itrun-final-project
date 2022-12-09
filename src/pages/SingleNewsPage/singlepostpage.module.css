@@ -1,5 +1,6 @@
 .newsWrapper  {
     display: flex;
+    justify-content: center;
 }
 
 .imgWrapper {
@@ -19,7 +20,11 @@
 .wrapper {
     width: 90%;
     margin: auto;
-    padding-top: 120px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 150px;
 }
 
 

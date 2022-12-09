@@ -35,7 +35,7 @@ const TopUsers = () => {
                     <h2 className={styles.title}>Top Users</h2>
                 </div>
 
-                <div className={styles.filterUsers}>
+                {/* <div className={styles.filterUsers}>
                         <Box sx={{ minWidth: 120 }}>
                             <FormControl fullWidth>
                                 <InputLabel id="demo-simple-select-label">Age</InputLabel>
@@ -52,7 +52,7 @@ const TopUsers = () => {
                                 </Select>
                             </FormControl>
                     </Box>
-                 </div>
+                 </div> */}
 
             </div>
 

@@ -5,27 +5,25 @@ import UserItem from '../../components/UsetItem/UserItem';
 import styles from './userpages.module.css'
 import Footer from '../../components/Footer/Footer'
 import TextField from '@mui/material/TextField';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 const UserPages = () => {
 
     const [users , setUsers] = useState([])
-    const [search , setSearch] = useState('')
-    const [ filteredUsers , setFilteredUsers] = useState([])
+    const [value , setValue] = useState('')
+    // const [ filteredUsers , setFilteredUsers] = useState([])
 
     useEffect(()=>{ 
         axios.get('http://localhost:3009/users')
             .then(res => {
                 setUsers(res.data)
-                setFilteredUsers(res.data)
             })
     },[])
 
-    
-    const findUsers = (e) => {
-        setFilteredUsers(users.filter(user => user.name.toLowerCase().includes(e.target.value.toLowerCase())))
-    }
-
+    const filteredUsers = users.filter(user => {
+        return user.login.toLowerCase().includes(value.toLocaleLowerCase())
+    })
 
 
 
@@ -35,13 +33,14 @@ const UserPages = () => {
         <BreadCrums title = 'All Users'/>
         <div className={styles.search}>
             <div className={styles.searchBlog}>
-                <h2>{search}</h2>
-                <TextField 
+                <TextField e
                 id="outlined-basic" 
-                value={search}
-                onChange ={findUsers}
-                label="Search User" 
-                style={{width:'50%'}}
+                onChange ={(e)=>setValue(e.target.value)}
+                label={<SearchIcon/>}
+                style={{
+                    width:'50%',
+                 }}
+
                 variant="outlined" />
                 
                 

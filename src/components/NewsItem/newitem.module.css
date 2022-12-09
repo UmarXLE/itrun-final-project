@@ -45,3 +45,8 @@
 a {
     text-decoration: none;
 }
+
+.item:hover {
+    transition: 0.25s ease all;
+    transform: translateX(-5px) translateY(-5px);
+}

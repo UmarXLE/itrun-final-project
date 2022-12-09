@@ -15,6 +15,7 @@ const Register = () => {
     const [open, setOpen] = useState(false);
     const [photo , setPhoto ] = useState('')
     const [favorites , setFavorites ] = useState([])
+    const [status , setStatus] = useState('guest')
 
 
     const register = (e) => {
@@ -24,7 +25,8 @@ const Register = () => {
             password,
             login,
             photo,
-            favorites
+            favorites,
+            status
         }
 
         axios.post(`http://localhost:3009/register`,newUser)
@@ -35,6 +37,7 @@ const Register = () => {
                 setPassword('')
                 setLogin('')
                 setPhoto('')
+                setStatus('')
             })
             .catch(error => console.log(error))
     }

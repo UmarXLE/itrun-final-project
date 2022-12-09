@@ -14,3 +14,11 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+.paginationWrapper {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}

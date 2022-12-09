@@ -14,10 +14,14 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
+import axios from 'axios'
+import { useSelector } from 'react-redux';
 
 const AboutPage = () => {
-
+    const user = useSelector(state  => state.user.currentUser)
+    console.log(user)
+    const [name , setName] = useState('')
+    const [number , setNumber] = useState('')
     const [form , setForm] = useState(false)
     const handleForm = () => {
         setForm(true)
@@ -25,6 +29,17 @@ const AboutPage = () => {
 
     const handleCloseForm = () => {
         setForm(false)
+    }
+    
+    const handleSend = (e) => {
+        e.preventDefault()
+        axios.post('http://localhost:3009/datausers',{
+            name,
+            number
+        }).then(res => {
+            console.log(res.data)
+            setForm(false)
+        })
     }
 
     const infoDataAbout = `GlobalGiving is a nonprofit that supports other nonprofits by connecting them to donors and companies. Since 2002, we've helped trusted, community-led organizations from Afghanistan to Zimbabwe (and hundreds of places in between) access the tools, training, and support they need to make our world a better place.`
@@ -140,35 +155,36 @@ const AboutPage = () => {
                 
             </div>
 
+                {
+                    form ? (<>
+                                <div>
+                                    <form className={styles.formContact}>
+                                    <button onClick={handleCloseForm} className={styles.formCloseBtn}>закрыть</button>
 
+                                    <TextField value={name} onChange={e=>setName(e.target.value)} id="standard-basic" label="Your Name" variant="outlined" />
+                                    <TextField value ={number} onChange={e=>setNumber(e.target.value)} id="standard-basic" label="Your Number" type='tel' variant="outlined" />
+                                    <Button variant="contained" onClick={handleSend}>Send</Button>
 
-            <div className={styles.contactUs}>
-                <div className={styles.contactInfo}>
-                    <h2 className={styles.contactTitle}>Contact Us</h2>
-                    <p className={styles.contactSubTitle}>Get in touch with our team to answer questions, <br /> explore partnerships, or fund our work.</p>
-                    <Button variant="contained" onClick={handleForm}>Get in touch</Button>
-                </div>
+                                    </form>
+                                </div>
+                    </>) : (<>
+                            <div className={styles.contactUs}>
+                        <div className={styles.contactInfo}>
+                            <h2 className={styles.contactTitle}>Contact Us</h2>
+                            <p className={styles.contactSubTitle}>Get in touch with our team to answer questions, <br /> explore partnerships, or fund our work.</p>
+                            <Button variant="contained" onClick={handleForm}>Get in touch</Button>
+                        </div>
 
-                
-                <div className={styles.contactImg}>
-                    <img src="https://www.charitynavigator.org/content/dam/cn/cn/people/mars-sector-6-IgUR1iX0mqM-unsplash.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg" alt="" />
-                </div>
+                        
+                        <div className={styles.contactImg}>
+                            <img src="https://www.charitynavigator.org/content/dam/cn/cn/people/mars-sector-6-IgUR1iX0mqM-unsplash.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg" alt="" />
+                        </div>
 
+                    </div>
+                    </>)
+                }
 
-                   { form && <> <div>
-                     <h2>form actived</h2>
-                     <button onClick={handleCloseForm}>close</button>
-                        <form className={styles.formContact}>
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                        <Button variant="contained">Contained</Button>
-
-                        </form>
-                 </div></>
-                    
-                   }
-
-            </div>
+           
 
 
 
@@ -178,3 +194,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+

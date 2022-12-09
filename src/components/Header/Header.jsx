@@ -1,17 +1,23 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink  ,Link } from 'react-router-dom';
+import { NavLink  ,Link, useNavigate } from 'react-router-dom';
 import styles from './header.module.css'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { logout } from '../../redux/userSlice'
+import { useLocation } from 'react-router-dom';
+import Menu from '../../components/Menu/Menu';
+import Tooltip from '@mui/material/Tooltip';
+
 
 
 const Header = () => {
-    
-
+    let location = useLocation();
+    const navigate = useNavigate()
+    console.log(location)
+    const [ menuActive , setMenuActive ] = useState(false)
     const user = useSelector(state  => state.user.currentUser)
     const dispatch = useDispatch()
     // user.status == 'admin' ? () : ()
@@ -22,9 +28,12 @@ const Header = () => {
         
         <header>
                 <div className={styles.headerLeft}>
+                <Tooltip title="Home" arrow>
                     <div className={styles.headerLogoWrapper}>
-                       <NavLink to='/'> <img src="./img/logo.png" alt="" /></NavLink>
+                       <NavLink  to='/'> <img src="./img/logo.png" alt="" /></NavLink>
                     </div>
+                    </Tooltip>
+
                 </div>
 
                 <div className={styles.headerRight}>
@@ -49,8 +58,11 @@ const Header = () => {
                         {
                             user ? (
                                 <div className={styles.user}>
-                                <NavLink to='/profiluser/' className={styles.nameUser}>{user?.login}</NavLink>
-                                <button className={styles.logout} onClick={()=> dispatch(logout())}>выйти </button>
+                                <NavLink to='/profiluser/:id' className={styles.nameUser}>{user?.login}</NavLink>
+                                <button className={styles.logout} onClick={()=>{
+                                    dispatch(logout())
+                                    navigate('/profile')
+                                } }>выйти </button>
                                 </div>
                             ):(
                                 <>
@@ -59,9 +71,24 @@ const Header = () => {
                             )
                         }
                     </nav>
+
+                        {/*  */}
+
+                            <nav className={styles.menuWrapper}>
+
+                                    <div className={styles.burgerBtn} onClick={()=>setMenuActive(!menuActive)}>
+                                    <span></span>
+                                    </div>
+
+                                    <main>
+                                    </main>
+                                    <Menu styles={styles} active = {menuActive} setActive = {setMenuActive} />
+                            </nav>
                 </div>
+                
 
         </header>
+        
         </div>
     );
 };

@@ -1,0 +1,41 @@
+.wrapper {
+    padding-top: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.infoWrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* height: calc(95vh - 100px); */
+    align-items: center;
+    
+}
+
+.info {
+    width: 40%;
+}
+
+.icon {
+    width: 40%;
+    margin-right: 5%;
+}
+
+.icon img {
+    max-width: 100%;
+}
+
+
+.formEdit {
+    padding-top: 80px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

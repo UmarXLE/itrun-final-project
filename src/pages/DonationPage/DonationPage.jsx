@@ -10,7 +10,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { Category } from '@mui/icons-material';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import PaginationComponent from '../../components/Pagination/Pagination'
+
 
 const DonationPage = () => {
 
@@ -18,6 +22,18 @@ const DonationPage = () => {
     const [ donations , setDonations ] = useState([])
     const [filteredDonations, setFilteredDonations ] = useState([])
     const [category , setCategory ] = useState('')
+    const [loading , setLoading ] = useState(true)
+    const [ currentPage , setCurrentPage ] = useState(1)
+    const [ perPage] = useState(3)
+
+
+    const lastIndex = currentPage * perPage
+    const firstIndex = lastIndex - perPage 
+    const currentPageNow = donations.slice(firstIndex , lastIndex)
+
+    const paginate = (pageNumber ) => setCurrentPage(pageNumber)
+    const nextPage = () => setCurrentPage(prev => prev + 1)
+    const prevPage = () => setCurrentPage(prev => prev -1)
 
     
 
@@ -32,13 +48,20 @@ const DonationPage = () => {
     };
 
     useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false)
+        },3000)
+    },[])
+
+
+    useEffect(()=>{
         axios.get(`http://localhost:3009/donations`)
         .then(res => {
             setDonations(res.data)
             setFilteredDonations(res.data)
         })
     },[])
-
+    console.log(filteredDonations)
     return (
         <div>
          <BreadCrums img={`https://picsum.photos/1000/350`} title ='Donation'/>
@@ -67,7 +90,32 @@ const DonationPage = () => {
                 {/* <DonationItem/> */}
 
                 {
-                    filteredDonations.map(donate => {
+                    loading ? (<>
+                        <Box sx={{
+                                width:'90%',
+                                display:'flex',
+                                flexWrap:'wrap',
+                                justifyContent:'center'
+                            }}>
+                                <Stack style={{margin:'15px'}} spacing={1} width='350px' height='250px'>
+                                    <Skeleton variant="rectangular" width='100%' height='70%' animation="wave"></Skeleton>
+                                    <Skeleton variant='text' height='10%'  width='100%' ></Skeleton>
+                                    <Skeleton variant='text' height='10%' width='100%' ></Skeleton>
+                                </Stack>
+                                <Stack style={{margin:'15px'}} spacing={1} width='350px' height='250px'>
+                                    <Skeleton variant="rectangular" width='100%' height='70%' animation="wave"></Skeleton>
+                                    <Skeleton variant='text' height='10%' width='100%'  ></Skeleton>
+                                    <Skeleton variant='text' height='10%' width='100%' ></Skeleton>
+                                </Stack>
+                                <Stack style={{margin:'15px'}} spacing={1} width='350px' height='250px'>
+                                    <Skeleton variant="rectangular" width='100%' height='70%' animation="wave"></Skeleton>
+                                    <Skeleton variant='text' height='10%' width='100%'  ></Skeleton>
+                                    <Skeleton variant='text' height='10%' width='100%' ></Skeleton>
+                                </Stack>
+                            </Box>
+                    </>):(<>
+                        {
+                    currentPageNow.map(donate => {
                         return <DonationItem
                         id = {donate.id}
                         key = {donate.id}
@@ -81,7 +129,20 @@ const DonationPage = () => {
 
                     // filteredDonations.filter(donation => donation.category ===)
                 }
+                    </>)
+                }
+                
+                
 
+            </div>
+            <div className ={styles.paginationWrapper}>
+            <button onClick = {()=>prevPage()}>prev</button>
+                <PaginationComponent 
+                perPage = {perPage} 
+                total = {donations.length}
+                paginate = { paginate}
+                />
+                <button onClick = {()=>nextPage()}>next</button>
             </div>
         <Footer />
          </div>     

@@ -2,3 +2,8 @@
     text-decoration: none;
     margin: 10px;
 }
+
+.item:hover {
+    transition: 0.25s ease all;
+    transform: translateX(-5px) translateY(-5px);
+}

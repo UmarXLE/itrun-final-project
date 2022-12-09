@@ -1,12 +1,57 @@
-import React from 'react';
+import React, { useEffect ,useState } from 'react';
+import '../NaturalDisasters/naturaldisasters.css'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer';
+import Breadcrumbs from '../../components/BreadCrums/BreadCrums'
+import axios from 'axios'
+import DonationItem from '../../components/DonationItem/DonationItem'
 
-const PoachingPage = () => {
+const NaturalDisasters = () => {
+    const [donations , setDonations ] = useState([])
+    const [filteredDonations , setFilteredDontaions] = useState([])
+    useEffect(()=>{
+        axios.get(`http://localhost:3009/donations`)
+            .then(res => {
+                setDonations(res.data)
+            })
+    },[])
+
+
+    console.log(filteredDonations)
+    
     return (
-        <div>
-            <h2>poaching</h2>
-            <p>gfgjksdfj gl;jdfl;j G4juOdmzEmPRLarnOdDCYdsOY6ap1gcJkYAfG6bhTtIHlaoAq4ggzCErYsmQRZOMRRBSfG0FplbVMzJIHp1d2m3NOeHYyTEwSkPFAKdV2UQDEjY2EnoVOnU0IKy31dMyzgpKzSvOR4MwHS08jItPogA</p>
+    
+        
+        <div className='wrapper'>
+        <Header />
+        <div className='mt100'>
+            <Breadcrumbs title='Poaching'/>
+                <div className='wrapperDontaions'>
+
+                    {
+                        donations.filter(item => item.category == 'poaching').map(donation => {
+                            return <DonationItem 
+                            id = {donation.id}
+                            key = {donation.id}
+                            img = {donation.img}
+                            title = {donation.title}
+                            descr = {donation.descr}
+                            price = {donation.price}
+                            time = {donation.time}
+                            />
+                        })
+                    }
+                   
+
+                </div>
+            <Footer />
+            </div>
         </div>
+        
+
     );
 };
 
-export default PoachingPage;
+
+
+export default NaturalDisasters;

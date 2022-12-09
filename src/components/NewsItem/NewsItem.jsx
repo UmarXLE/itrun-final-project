@@ -26,7 +26,7 @@ const NewsItem = (props) => {
      
     return (
     
-<Link to={`/posts/${props.id}`} >
+<Link className={styles.item} to={`/posts/${props.id}`} >
     <Card  style={{
       'margin':'10px'
       }} sx={{ maxWidth: 345 }}>

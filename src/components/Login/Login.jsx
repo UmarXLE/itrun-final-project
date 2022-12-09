@@ -30,7 +30,7 @@ const Login = () => {
 
         axios.post('http://localhost:3009/login',user)
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 setLogin(res.data.user.login)
                 setOpenSucces(true)
                 // здесь будет проищсходит суета с редакс

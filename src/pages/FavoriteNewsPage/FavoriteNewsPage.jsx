@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios'
 import NewsItem from '../../components/NewsItem/NewsItem'
 import styles from './favoritenewspage.module.css'
+import  BreadCrumbs  from '../../components/BreadCrums/BreadCrums';
 
 const FavoriteNewsPage = () => {
     const favorites = useSelector(state => state.user.currentUser.favorites)
@@ -25,7 +26,7 @@ const FavoriteNewsPage = () => {
 
     return (
         <>
-                    <h2>favorite news</h2>
+        <BreadCrumbs title='Favorites news & donations'/>
         <div className={styles.wrapper}>
             {
                 news.map(news => {
