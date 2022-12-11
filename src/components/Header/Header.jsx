@@ -59,10 +59,7 @@ const Header = () => {
                             user ? (
                                 <div className={styles.user}>
                                 <NavLink to='/profiluser/:id' className={styles.nameUser}>{user?.login}</NavLink>
-                                <button className={styles.logout} onClick={()=>{
-                                    dispatch(logout())
-                                    navigate('/profile')
-                                } }>выйти </button>
+                                
                                 </div>
                             ):(
                                 <>

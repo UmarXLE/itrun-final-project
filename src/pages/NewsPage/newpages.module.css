@@ -23,7 +23,17 @@
 
 .paginationWrapper {
     width: 50%;
-    margin: 30px auto;
+    margin: auto;
+    /* margin: 30px auto; */
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.paginationWrapper button {
+    background: none;
+    border: none;
+    width: 50px;
+    cursor: pointer;
+    font-size: 20px;
 }

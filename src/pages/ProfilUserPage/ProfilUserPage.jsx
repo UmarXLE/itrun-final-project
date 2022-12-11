@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './profileuserpage.module.css'
 import Footer from '../../components/Footer/Footer'
 import Card from '@mui/material/Card';
@@ -7,11 +7,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { logout } from '../../redux/userSlice'
+
 
 const ProfilUserPage = (props) => {
     const user = useSelector(state => state.user.currentUser)
     console.log(user)
+    const dispatch = useDispatch()
     const [donations , setDonations] = useState([])
+    const navigate = useNavigate()
 
     // useEffect(()=>{
     //     axios.get(`http://localhost:3009/users/${user.id}`)
@@ -48,8 +53,11 @@ const ProfilUserPage = (props) => {
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small" color="primary">
-                        Share
+                        <Button variant="outlined" size="small" color="error" onClick = {()=>{
+                            dispatch(logout())
+                            navigate('/profile')
+                        }}>
+                        Logout
                         </Button>
                     </CardActions>
                     </Card>

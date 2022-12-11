@@ -14,6 +14,12 @@ import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import PaginationComponent from '../../components/Pagination/Pagination'
+import {IoIosArrowForward , IoIosArrowBack} from 'react-icons/io'
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { green, orange } from '@mui/material/colors';
+
 
 
 const DonationPage = () => {
@@ -26,6 +32,14 @@ const DonationPage = () => {
     const [ currentPage , setCurrentPage ] = useState(1)
     const [ perPage] = useState(3)
 
+    const outerTheme = createTheme({
+        palette: {
+          primary: {
+            main: orange[500],
+          },
+        },
+      });
+
 
     const lastIndex = currentPage * perPage
     const firstIndex = lastIndex - perPage 
@@ -36,16 +50,6 @@ const DonationPage = () => {
     const prevPage = () => setCurrentPage(prev => prev -1)
 
     
-
-    const handleChange = (event ,category) => {
-      setCategory(event.target.value);
-        if(category == 'all' ){
-            setFilteredDonations(donations)
-        }else if (category == 'disasters' ){
-            const newDonations = [...donations].filter(donation => donation.category === category)
-            setFilteredDonations(newDonations)
-        }
-    };
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -59,8 +63,11 @@ const DonationPage = () => {
         .then(res => {
             setDonations(res.data)
             setFilteredDonations(res.data)
+            
         })
     },[])
+
+
     console.log(filteredDonations)
     return (
         <div>
@@ -68,22 +75,22 @@ const DonationPage = () => {
          <div className={styles.filterWrapper}>
             <div></div>
             <div className={styles.filter}>
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Category</InputLabel>
-                    <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    // onChange = {handleFilter}
-                    value={category}
-                    // label="Age"
-                    onChange={(e,category)=>handleChange(e,category)}
+                    <ButtonGroup
+                    disableElevation
+                    variant="text"
+                    color="info"
+                    aria-label="Disabled elevation buttons"
+                    className = {styles.btnGroup}
                     >
-
-                    <MenuItem value='all'>All</MenuItem>
-                    <MenuItem value='disasters'>Natural Disasters</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-            </FormControl>
+                        <ThemeProvider theme={outerTheme}>
+                    <Button>All</Button>
+                    <Button>Natural Disasters</Button>
+                    <Button>Halping Animals</Button>
+                    <Button>Poaching</Button>
+                    <Button>War</Button>
+                    <Button>Halping for the elderly</Button>
+                    </ThemeProvider>
+                </ButtonGroup>
             </div>
          </div>
             <div className={styles.wrapperDonations}>
@@ -127,6 +134,20 @@ const DonationPage = () => {
                         />
                     })
 
+
+                    // filteredDonations.filter(item => item.category == category).map(donate => {
+                    //     console.log(donate)
+                    //     return <DonationItem
+                    //     id = {donate.id}
+                    //     key = {donate.id}
+                    //     img = {donate.img}
+                    //     title = {donate.title}
+                    //     descr = {donate.descr}
+                    //     price = {donate.price}
+                    //     time = {donate.time}
+                    //     />
+                    // })
+
                     // filteredDonations.filter(donation => donation.category ===)
                 }
                     </>)
@@ -136,13 +157,13 @@ const DonationPage = () => {
 
             </div>
             <div className ={styles.paginationWrapper}>
-            <button onClick = {()=>prevPage()}>prev</button>
+            <button onClick = {()=>prevPage()}><IoIosArrowBack/></button>
                 <PaginationComponent 
                 perPage = {perPage} 
                 total = {donations.length}
                 paginate = { paginate}
                 />
-                <button onClick = {()=>nextPage()}>next</button>
+                <button onClick = {()=>nextPage()}><IoIosArrowForward /></button>
             </div>
         <Footer />
          </div>     

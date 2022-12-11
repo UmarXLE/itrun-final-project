@@ -13,6 +13,7 @@ import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import PaginationComponent from '../../components/Pagination/Pagination'
+import {IoIosArrowForward , IoIosArrowBack} from 'react-icons/io'
 
 const NewsPage = () => {
     
@@ -154,13 +155,23 @@ const NewsPage = () => {
             </div>
 
             <div className ={styles.paginationWrapper}>
-            <button onClick = {()=>prevPage()}>prev</button>
+                <div>
+                    <button onClick = {()=>prevPage()}>
+                        <IoIosArrowBack />
+                    </button>
+                </div>
+            
                 <PaginationComponent 
                  perPage = {perPage} 
                 total = {posts.length}
                 paginate = { paginate}
                 />
-                <button onClick = {()=>nextPage()}>next</button>
+                <div>
+                    <button onClick = {()=>nextPage()}>
+                        <IoIosArrowForward />
+                    </button>
+                </div>
+                
             </div>
             
             <Footer />

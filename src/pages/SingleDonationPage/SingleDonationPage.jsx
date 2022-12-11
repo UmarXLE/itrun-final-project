@@ -6,9 +6,11 @@ import Button from '@mui/material/Button';
 import Footer from '../../components/Footer/Footer'
 import TextField from '@mui/material/TextField';
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 
 const SingleDonationPage = (props) => {
+    const user = useSelector(state => state.user.currentUser)
     const {id} = useParams()
     const navigate = useNavigate()
     const [donate , setDonate ] = useState({})
@@ -130,16 +132,19 @@ const SingleDonationPage = (props) => {
                     <p>Date : {donate.time}</p>
                     <div className ={styles.btnWrapper}>
                         <Link to='/payment/:id'> <Button color="success" variant="contained">Donate</Button></Link>
-                        <Button 
-                        style={{margin:'0 10px'}} 
-                        onClick = {handleEditMode}
-                        variant="contained">Edit</Button>
+                        {user?.status === 'admin' && <>
+                            <Button 
+                            style={{margin:'0 10px'}} 
+                            onClick = {handleEditMode}
+                            variant="contained">Edit</Button>
 
-                        <Button 
-                        variant="contained"
-                        color="error"
-                        onClick = {handleDelete}
-                        >delete</Button>
+                            <Button 
+                            variant="contained"
+                            color="error"
+                            onClick = {handleDelete}
+                            >delete</Button>
+                        </>}
+                        
 
                     </div>
                     </div>

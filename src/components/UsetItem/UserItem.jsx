@@ -4,10 +4,24 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const UserItem = (props) => {
-    return (
+  const user = useSelector(state  => state.user.currentUser)
+  const navigate = useNavigate()
+  const deleteUser = () => {
+    axios.delete(`http://localhost:3009/users/${props.id}`)
+      .then(res => {
+        navigate('/users')
+        console.log(res.data)
+
+      }).catch(err => console.log(err))
+  }
+  console.log(props)
+
+  return (
         // <div className={styles.item}>
         //     <div className={styles.userIcon}>
         //         <img src={props.photo} alt="" />
@@ -42,6 +56,14 @@ const UserItem = (props) => {
           </Typography> */}
         </CardContent>
       </CardActionArea>
+      <CardActions>
+        {
+          user?.status === 'admin' && <><Button size="small" color="error" onClick = {()=>deleteUser()}>
+          Delete
+        </Button></>
+        }
+        
+      </CardActions>
     </Card>
     );
 };

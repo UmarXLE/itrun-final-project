@@ -39,3 +39,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.btnWrapper {
+    margin-top: 15px;
+}

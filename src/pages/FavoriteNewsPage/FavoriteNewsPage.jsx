@@ -16,11 +16,20 @@ const FavoriteNewsPage = () => {
 
     console.log(param)
     console.log(news)
+    // console.log(favoru)
 
     useEffect(()=>{
         axios.get(`http://localhost:3009/posts?${param}`)
             .then(res => setNews(res.data))
     },[])
+
+
+    const deleteNews = () => {
+        axios.delete(`http://localhost:3009/users`)
+            .then(res => {
+                console.log(res.data)
+            })
+    }
 
     
 
@@ -36,7 +45,7 @@ const FavoriteNewsPage = () => {
                     img = {news.img}
                     title = {news.title}
                     descr = {news.descr}
-                    // deleteNews = {()=>deleteNews(post.id)}
+                    deleteNews = {()=>deleteNews(param)}
                     />
                 })
             }
