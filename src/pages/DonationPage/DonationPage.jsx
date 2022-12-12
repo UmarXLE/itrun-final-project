@@ -31,6 +31,7 @@ const DonationPage = () => {
     const [loading , setLoading ] = useState(true)
     const [ currentPage , setCurrentPage ] = useState(1)
     const [ perPage] = useState(3)
+    
 
     const outerTheme = createTheme({
         palette: {
@@ -67,6 +68,13 @@ const DonationPage = () => {
         })
     },[])
 
+    const handleFilter = (status) => {
+        console.log(status)
+        if(status == 'all') {
+            setCurrentPage(donations)
+        }
+    }
+
 
     console.log(filteredDonations)
     return (
@@ -82,13 +90,13 @@ const DonationPage = () => {
                     aria-label="Disabled elevation buttons"
                     className = {styles.btnGroup}
                     >
-                        <ThemeProvider theme={outerTheme}>
-                    <Button>All</Button>
-                    <Button>Natural Disasters</Button>
-                    <Button>Halping Animals</Button>
-                    <Button>Poaching</Button>
-                    <Button>War</Button>
-                    <Button>Halping for the elderly</Button>
+                    <ThemeProvider theme={outerTheme}>
+                    <Button onClick={()=>handleFilter('all')}>All</Button>
+                    <Button onClick={()=>handleFilter('disasters')}>Natural Disasters</Button>
+                    <Button onClick={()=>handleFilter('animals')}>Halping Animals</Button>
+                    <Button onClick={()=>handleFilter('poaching')}>Poaching</Button>
+                    <Button onClick={()=>handleFilter('war')}>War</Button>
+                    <Button onClick={()=>handleFilter('elderly')}>Halping for the elderly</Button>
                     </ThemeProvider>
                 </ButtonGroup>
             </div>

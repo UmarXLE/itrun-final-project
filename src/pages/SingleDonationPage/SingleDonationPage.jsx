@@ -131,7 +131,7 @@ const SingleDonationPage = (props) => {
                     <p>Price : {donate.price}</p>
                     <p>Date : {donate.time}</p>
                     <div className ={styles.btnWrapper}>
-                        <Link to='/payment/:id'> <Button color="success" variant="contained">Donate</Button></Link>
+                        <Link to={`/payment/${donate.id}`}> <Button color="success" variant="contained">Donate</Button></Link>
                         {user?.status === 'admin' && <>
                             <Button 
                             style={{margin:'0 10px'}} 

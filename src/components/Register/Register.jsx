@@ -37,7 +37,7 @@ const Register = () => {
                 setPassword('')
                 setLogin('')
                 setPhoto('')
-                setStatus('')
+                // setStatus('')
             })
             .catch(error => console.log(error))
     }

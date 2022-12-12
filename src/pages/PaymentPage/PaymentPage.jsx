@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 import styles from './payment.module.css'
 import {Elements} from '@stripe/react-stripe-js';
@@ -8,19 +8,25 @@ import { useParams  } from 'react-router-dom';
 
 const PaymentPage = () => {
     const {id} = useParams()
+    const [ donate , setDonate] = useState([])
 
     useEffect(()=>{
-        axios.get(`http://localhost:3009/donations`)
-            .then(res => console.log(res.data))
+        axios.get(`http://localhost:3009/donations/${id}`)
+            .then(res => {
+                setDonate(res.data)
+                console.log(res.data)
+            })
     },[])
 
-    const stripePromise = loadStripe('pk_test_51M6Z8TIXrIEzOq5eyxkQByRLaW2Asa45WzrZoAJsRSvFXZHU2AOydYdEbl69wSpDLFmoTMDpGUZVG5Ip7KPPTj5x00mDPc7svb')
+    console.log(donate)
+    
+    // const stripePromise = loadStripe('pk_test_51M6Z8TIXrIEzOq5eyxkQByRLaW2Asa45WzrZoAJsRSvFXZHU2AOydYdEbl69wSpDLFmoTMDpGUZVG5Ip7KPPTj5x00mDPc7svb')
     return (
         <div className={styles.wrapper}>
-            <h2>Payment page</h2>
-            <Elements stripe={stripePromise} >
+            <h2>{donate.img}</h2>
+            {/* <Elements stripe={stripePromise} >
                  <CheckoutForm />
-             </Elements>
+             </Elements> */}
         </div>
     );
 };

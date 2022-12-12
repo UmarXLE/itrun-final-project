@@ -44,9 +44,8 @@ nav {
 .nameUser {
     font-size: 20px;
     font-weight: 700;
-    border-bottom: 2px solid green;
-    color: green;
-    padding-bottom: 1px;
+    
+    color: green !;
 }
 
 .user {
@@ -131,6 +130,7 @@ a::before {
     left: 0;
     height: 3px;
     width: 100%;
+    border-radius: 10%;
     background-color: black;
     transform-origin: right top;
     transform: scale(0,1);
@@ -141,6 +141,8 @@ a::before {
 
 nav a:hover::before ,
 nav a:focus::before {
+    border-radius: 10%;
+
     transform-origin: left top;
     transform: scale(1,1);
 }
@@ -151,6 +153,8 @@ nav a {
     margin-right: 30px;
     position: relative;
     padding: 16px 0;
+    border-radius: 10%;
+
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;

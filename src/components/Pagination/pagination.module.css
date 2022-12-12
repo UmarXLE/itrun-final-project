@@ -17,8 +17,14 @@
     justify-content: center;
 }
 
-.btn:hover{
+.btn:hover
+{
     transition: 1s;
+    color: white;
+    background-color: #336699;
+}
+
+.btn:focus{
     color: white;
     background-color: #336699;
 }

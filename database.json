@@ -115,6 +115,33 @@
       "favorites": [],
       "status": "",
       "id": 33
+    },
+    {
+      "email": "12@gmail.com",
+      "password": "$2a$10$Rbqodvfop5hdDC/ke7eu8uCC73iQ2cIm.19Ag1spQFGCfAwhMgdPG",
+      "login": "Jesse Andrews",
+      "photo": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/09acd3119217391.Y3JvcCwxNDAwLDEwOTUsMCwyNA.jpg",
+      "favorites": [],
+      "status": "guest",
+      "id": 34
+    },
+    {
+      "email": "13@gmail.com",
+      "password": "$2a$10$72yv4eaz8wv.57t0QmojKeCNcQGNNJlrFOU3uYdZ8SQi0P2q3qzQu",
+      "login": "Steven Thomas",
+      "photo": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/4efc88157628557.Y3JvcCwyMzgxLDE4NjIsMCw5NA.jpg",
+      "favorites": [],
+      "status": "",
+      "id": 35
+    },
+    {
+      "email": "0@gmail.com",
+      "password": "$2a$10$FTW/Ua0oHnv2m84YSPAwMeUE.HOhZ6qhdPDBouxSyTr65c53AWD6C",
+      "login": "1",
+      "photo": "",
+      "favorites": [],
+      "status": "guest",
+      "id": 36
     }
   ],
   "posts": [

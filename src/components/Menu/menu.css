@@ -43,6 +43,22 @@
     color: blue;
 }
 
-@media (max-width:800px) {
+@media (max-width:1000px) {
+    .menu {
+        position: fixed;
+        /* right: 0; */
+        width: 100%;
+        height: 100vh;
+        top: 84px;
+        background-color:#999999;
+        transform: translateX(100%);
+        transition: 2s ease all;
+        text-align: center;
+    }
+    .menu.active {
+        transform: translateX(-80.5%);
+        transition: 2s ease all;
+    
+    }
     
 }

@@ -4,6 +4,7 @@ import axios from 'axios'
 import NewsItem from '../../components/NewsItem/NewsItem'
 import styles from './favoritenewspage.module.css'
 import  BreadCrumbs  from '../../components/BreadCrums/BreadCrums';
+import Footer from '../../components/Footer/Footer'
 
 const FavoriteNewsPage = () => {
     const favorites = useSelector(state => state.user.currentUser.favorites)
@@ -50,6 +51,7 @@ const FavoriteNewsPage = () => {
                 })
             }
         </div>
+        <Footer/>11
         </>
         
     );
