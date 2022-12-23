@@ -10,6 +10,7 @@ const ProfilePage = () => {
         <div className={styles.wrapper}>
 
             <BreadCrums title='Profile'/>    
+            
 
             <div className={styles.formWrapper}>
                 <Login />

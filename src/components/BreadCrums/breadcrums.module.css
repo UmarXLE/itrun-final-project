@@ -26,3 +26,17 @@
     margin:auto;
     font-size: 50px;
 }
+
+
+
+@media (max-width:767px) {
+    .wrapper {
+        aspect-ratio: 2/1;
+    }
+}
+
+@media (max-width:576px) {
+    .title {
+        font-size: 35px;
+    }
+}

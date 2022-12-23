@@ -1,7 +1,7 @@
 import React from 'react';
 // import {BsInstagram} from 'react-icons/bs' 
-import { BsInstagram ,BsWhatsapp ,BsTelegram} from 'react-icons/bs';
-
+import { BsInstagram ,BsWhatsapp ,BsTelegram } from 'react-icons/bs';
+import {TbBrandTelegram} from 'react-icons/tb'
 import styles from './footer.module.css'
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.socialMedia}>
                 <div className={styles.socialInfo}>
                     <p>
-                    Copyright 2022 © Portier. All right reserved
+                    ITRUN 2022 © Portier. All right reserved Umarom
                     </p>
                 </div>
 

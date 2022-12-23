@@ -8,6 +8,15 @@ import { loginSuccess } from '../../redux/userSlice';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 import { useSelector } from 'react-redux';
+import MuiAlert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+
+
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 
 const Login = () => {
 
@@ -39,16 +48,21 @@ const Login = () => {
                 dispatch(loginSuccess(res.data.user))
             })
             .catch(error => {
-                console.log(error)
                 setOpen(true)
+                console.log(error)
             })
         
     }
 
 
-    const handleClose = () => {
-        setOpen(false)
-    }
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+  
+      setOpen(false);
+      setOpenSucces(false)
+    };
 
     const action = (
         <React.Fragment>
@@ -90,7 +104,7 @@ const Login = () => {
             type='submit' 
             style={{'marginTop':'10px','padding':'12px'}} 
             variant="contained">Войти</Button>
-
+{/* 
 <Snackbar
         open={open}
         autoHideDuration={6000}
@@ -105,8 +119,37 @@ const Login = () => {
         onClose={handleClose}
         message = {<p style={{'color':'green' ,'fontWeight':'700'}}> Добро пожаловать {user?.login} </p>}
         action={action}
-      />
+      /> */}
 
+
+<Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+        Пользователь не найден !           </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
+
+    <Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={openSucces} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
+                Welcome {user?.login} !
+        </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
         </form>
 
     );

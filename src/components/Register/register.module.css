@@ -3,3 +3,16 @@
     flex-direction: column;
     width: 45%;
 }
+
+.title {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width:767px) {
+    .form {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}

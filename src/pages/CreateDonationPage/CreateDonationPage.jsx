@@ -9,7 +9,17 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import MuiAlert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
 
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  
+
+  
 const CreateDonationPage = () => {
 
     const [title , setTitle] = useState('')
@@ -18,6 +28,7 @@ const CreateDonationPage = () => {
     const [price , setPrice ] = useState(0)
     const [time , setTime ] = useState('')
     const [category, setCategory] = useState('');
+    const [open, setOpen] = useState(false);
 
     const [disasters , setDisasters ] = useState('disasters')
     const [ animals , setAnimals ] = useState('animals')
@@ -46,8 +57,18 @@ const CreateDonationPage = () => {
             setPrice('')
             setTime('')
             setCategory('')
+            setOpen(true)
         })
     }
+
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setOpen(false);
+      };
 
 
     return (
@@ -134,6 +155,22 @@ const CreateDonationPage = () => {
 
             </div>
             <Footer />
+
+
+            <Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
+        The donations has been successfully created!
+        </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
         </div>
     );
 };

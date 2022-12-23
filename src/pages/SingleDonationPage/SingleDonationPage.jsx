@@ -7,6 +7,15 @@ import Footer from '../../components/Footer/Footer'
 import TextField from '@mui/material/TextField';
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux';
+import MuiAlert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  
 
 
 const SingleDonationPage = (props) => {
@@ -20,6 +29,8 @@ const SingleDonationPage = (props) => {
     const [ newDescr , setNewDescr] = useState('')
     const [ newPrice , setNewPrice ] = useState('')
     const [ newTime , setNewTime ] = useState('')
+    const [saveMove , setSaveMove] = useState(false)
+    const [deleteMove , setDeleveMove] = useState(false)
     
     useEffect(()=>{
         axios.get(`http://localhost:3009/donations/${id}`)
@@ -57,8 +68,18 @@ const SingleDonationPage = (props) => {
             setDonate(res.data)
             setEdit(false)
             console.log(res.data)
+            setSaveMove(true)
         }).catch(err => console.log(err))
     }
+
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setSaveMove(false)
+      };
 
 
     return (
@@ -127,9 +148,9 @@ const SingleDonationPage = (props) => {
                 </div>
                 <div className={styles.info}>
                     <h2>{donate.title}</h2>
-                    <p>{donate.descr}</p>
-                    <p>Price : {donate.price}</p>
-                    <p>Date : {donate.time}</p>
+                    <p className={styles.descr}>{donate.descr}</p>
+                    <p className={styles.price}>Price : {donate.price}</p>
+                    <p className={styles.date}>Date : {donate.time}</p>
                     <div className ={styles.btnWrapper}>
                         <Link to={`/payment/${donate.id}`}> <Button color="success" variant="contained">Donate</Button></Link>
                         {user?.status === 'admin' && <>
@@ -155,6 +176,28 @@ const SingleDonationPage = (props) => {
 
                 
         <Footer />
+
+           
+<Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={saveMove} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+            Donate successfully changed!
+        </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
+
+   
+        
+
+
+        
         </div>
     );
 };

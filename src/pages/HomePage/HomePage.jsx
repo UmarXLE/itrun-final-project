@@ -8,6 +8,8 @@ import TopUsers from '../../components/TopUsets/TopUsers';
 import styles from './home.module.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import Statistics from '../../components/Statistics/Statistics';
+import SignUp from '../../components/SignUp/SignUp';
 
 const HomePage = () => {
 
@@ -46,8 +48,6 @@ const HomePage = () => {
                     <h2>Nigeria Flood Relief Fund</h2>
                     <div>
                     <Link to='/donation'><button className={styles.donationBtn}>Donate</button></Link>
-                    
-
                     </div>
                 </div>
 
@@ -64,8 +64,10 @@ const HomePage = () => {
 
             <Letter infoData={infoDataHome} />
             <NewsContent news = {news} setNews = {setNews}/>
+            <Statistics />
             <TopUsers />
             <Category />
+            <SignUp />
             <Footer />
             
 

@@ -26,7 +26,8 @@ header {
     color:black;
     font-weight: 700;
     text-transform: uppercase;
-    
+    display: flex;
+    align-items: center;
 }
 nav {
     display: flex;
@@ -131,33 +132,52 @@ a::before {
     height: 3px;
     width: 100%;
     border-radius: 10%;
-    background-color: black;
+    background-color: #1976d2;
     transform-origin: right top;
     transform: scale(0,1);
     transition: color 3s , transform 0.3s ease-out;
-
+    color: #1976d2;
 }
 
 
 nav a:hover::before ,
 nav a:focus::before {
     border-radius: 10%;
-
+    color: #1976d2;
     transform-origin: left top;
     transform: scale(1,1);
 }
 
 nav a {
-    color: inherit;
+    /* color: inherit; */
     text-decoration: none;
     margin-right: 30px;
     position: relative;
     padding: 16px 0;
     border-radius: 10%;
-
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
     transition:color 3s ,background-color 3s,padding 3s ease-in;
-    color: black;
+    color: #1976d2;
+}
+
+@media (max-width:992px) {
+    
+.nameUser {
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    color: green !;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
 }

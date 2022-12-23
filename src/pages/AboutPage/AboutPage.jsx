@@ -16,6 +16,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import axios from 'axios'
 import { useSelector } from 'react-redux';
+import {IoClose} from 'react-icons/io5'
 
 const AboutPage = () => {
     const user = useSelector(state  => state.user.currentUser)
@@ -57,8 +58,7 @@ const AboutPage = () => {
 
             {/* придумать чтонибудь как на сайте , типо карты и тд */}
             <div className={styles.video}>
-            <iframe src="https://www.youtube.com/embed/4ElUAHWC2PY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <iframe  src="https://www.youtube.com/embed/vxqZQXJ7uZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
 
             <DonationFindInfo styles={styles}/>
 
@@ -85,10 +85,10 @@ const AboutPage = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <Typography>Leadership</Typography>
+                    <Typography variant="h6" component="h6">Leadership</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography variant="h7" component="h7">
                     We dream big and strive toward making the seemingly impossible possible, lifting the sector as we go.
                     </Typography>
                     </AccordionDetails>
@@ -99,10 +99,10 @@ const AboutPage = () => {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Collabaration</Typography>
+                    <Typography variant="h6" component="h6">Collabaration</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography variant="h7" component="h7">
                     We collaborate internally and externally to accelerate our work and achieve more together.
                     </Typography>
                     </AccordionDetails>
@@ -114,10 +114,10 @@ const AboutPage = () => {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Equity</Typography>
+                    <Typography variant="h6" component="h6">Equity</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography variant="h7" component="h7">
                     We stand for equity, diversity, and inclusion within our organization and through our evaluations and guidance.
                     </Typography>
                     </AccordionDetails>
@@ -129,10 +129,10 @@ const AboutPage = () => {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Fairness</Typography>
+                    <Typography variant="h6" component="h6">Fairness</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography variant="h7" component="h7">
                     We assume good intent, leading with trust within our organization and through our work to catalyze giving wherever there is need.
                     </Typography>
                     </AccordionDetails>
@@ -144,10 +144,10 @@ const AboutPage = () => {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Usefulness</Typography>
+                    <Typography variant="h6" component="h6">Usefulness</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography variant="h7" component="h7">
                     We provide fair, transparent evaluations, and valuable tools to enable a diverse set of donors to find and support an ever-greater number of nonprofits they can trust.
                     </Typography>
                     </AccordionDetails>
@@ -157,13 +157,13 @@ const AboutPage = () => {
 
                 {
                     form ? (<>
-                                <div>
+                                <div className={styles.mt50px}>
                                     <form className={styles.formContact}>
-                                    <button onClick={handleCloseForm} className={styles.formCloseBtn}>закрыть</button>
+                                    <button onClick={handleCloseForm} className={styles.formCloseBtn}><IoClose/></button>
 
-                                    <TextField value={name} onChange={e=>setName(e.target.value)} id="standard-basic" label="Your Name" variant="outlined" />
-                                    <TextField value ={number} onChange={e=>setNumber(e.target.value)} id="standard-basic" label="Your Number" type='tel' variant="outlined" />
-                                    <Button variant="contained" onClick={handleSend}>Send</Button>
+                                    <TextField margin='dense' value={name} onChange={e=>setName(e.target.value)} id="standard-basic" label="Your Name" variant="outlined" />
+                                    <TextField margin='dense' value ={number} onChange={e=>setNumber(e.target.value)} id="standard-basic" label="Your Number" type='tel' variant="outlined" />
+                                    <Button style={{padding:'8px 75px'}} variant="contained" onClick={handleSend}>Send</Button>
 
                                     </form>
                                 </div>

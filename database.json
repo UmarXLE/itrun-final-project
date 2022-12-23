@@ -19,6 +19,11 @@
       "name": "",
       "number": "",
       "id": 4
+    },
+    {
+      "name": "Umar",
+      "number": "05948609456",
+      "id": 5
     }
   ],
   "users": [
@@ -39,7 +44,9 @@
         1,
         9,
         1,
-        11
+        11,
+        2,
+        3
       ]
     },
     {
@@ -103,7 +110,10 @@
       "password": "$2a$10$qkARSddzytDr4V6V25kDCuuS0CXCWdxrUTxwJ3hATcYeUmQzanYRa",
       "login": "John Carpenter",
       "photo": "https://avatars.mds.yandex.net/i?id=623f3d4e38d74276e70c794f16bc34f61cd8e821-7998332-images-thumbs&n=13",
-      "favorites": [],
+      "favorites": [
+        13,
+        13
+      ],
       "status": "guest",
       "id": 31
     },
@@ -142,17 +152,324 @@
       "favorites": [],
       "status": "guest",
       "id": 36
+    },
+    {
+      "email": "323@gmail.com",
+      "password": "$2a$10$2.SgAA0OOh67KQVsTqDgHugGSBVCK0XefTTWI5i4ceOy1HZdz0dwe",
+      "login": "fsdfjklsjdaf",
+      "photo": "fsdafds",
+      "favorites": [],
+      "status": "guest",
+      "id": 37
+    },
+    {
+      "email": "323@gmail.com",
+      "password": "$2a$10$2/9MsMvUyMpvRvycykuiPe3Wb07xKFoplvATDbRrm4XY4zC/ByNMC",
+      "login": "fsdfjklsjdaf",
+      "photo": "fsdafds",
+      "favorites": [],
+      "status": "guest",
+      "id": 38
+    },
+    {
+      "email": "fkdl@gmail.com",
+      "password": "$2a$10$tfzFS6oZ9Q/Txi/GenKHhO.JTa0Z8pgJJThqqz23iQH85RUw4iHKG",
+      "login": "Ura",
+      "photo": "",
+      "favorites": [],
+      "status": "guest",
+      "id": 39
+    },
+    {
+      "email": "20@gmail.com",
+      "password": "$2a$10$6RwDAfsnFl1OBSjfJERqIuPqudULwR08GXoj2OtXco76575n.yGfy",
+      "login": "Manuel King",
+      "photo": "https://avatars.mds.yandex.net/i?id=d8671c538627cf8c883cc20b06ae40f8976a7ec3-6335046-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 40
+    },
+    {
+      "email": "21@gmail.com",
+      "password": "$2a$10$OdoSkEQzuT46gFcd6CMuGuYIpvcsz1H6jSuUplmqMbQebQg1I8kDm",
+      "login": "Lawrence Vasquez",
+      "photo": "https://fb.ru/media/i/2/5/7/4/9/8/8/i/2574988.jpg",
+      "favorites": [],
+      "status": "guest",
+      "id": 41
+    },
+    {
+      "email": "22@gmail.com",
+      "password": "$2a$10$soB3AdRPeXXw53gd41kGIO3OK2RxXGLSnkILgjrpuU10nZl0BAHHC",
+      "login": "Billy Mann",
+      "photo": "https://avatars.mds.yandex.net/i?id=e90e89b18ad3fb02c36cc4dd14df362e-4034191-images-thumbs&ref=rim&n=33&w=225&h=150",
+      "favorites": [],
+      "status": "guest",
+      "id": 42
+    },
+    {
+      "email": "43249@gmail.com",
+      "password": "$2a$10$8IESdynrJh0Gs7wEj.dLceFLkFR7xKyd.obISx0FHKVbaVYYAAB3i",
+      "login": "Nathan Lambert",
+      "photo": "https://avatars.mds.yandex.net/i?id=e6b17b4ac490ae7819a2b5957a89d5e5b6ba7a01-5229803-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 43
+    },
+    {
+      "email": "43@gmail.com",
+      "password": "$2a$10$ZbM6wbSIH9PeIdRHRkIDo.c0D.5xSfDIB7oTbXePKAyBmiwK.0Nly",
+      "login": "Juan Davis",
+      "photo": "https://avatars.mds.yandex.net/i?id=daf493d30679c49fedc7edbae8e67b4a-5221692-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 44
+    },
+    {
+      "email": "jfdj@gmail.com",
+      "password": "$2a$10$oUVPxRp08xIKZ4shlUyjZ.x546N254HYxQ7bYWyM0bYAp/SSbLXp6",
+      "login": "Robert Chavez",
+      "photo": "https://avatars.mds.yandex.net/i?id=f5adca194db9a5f486a46fd2225bd859f7ee9939-7547473-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 45
+    },
+    {
+      "email": "fjdkljf@gmail.com",
+      "password": "$2a$10$K4OabzAXrAHoM2ABjWxg7uScMIRBMgVclkDcFeaX0Sf6rE56bJ2Dq",
+      "login": "Bernard Wright",
+      "photo": "https://avatars.mds.yandex.net/i?id=a4585ebc962b8e81860e022aeaa76a79ccae236f-5232476-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 46
+    },
+    {
+      "email": "fdksfk@gmail.com",
+      "password": "$2a$10$i8A6oFFwPsHV9osA4Punke44tyKGfpDAOo5G2nAZMJRv5wwQHWbSO",
+      "login": "Scott Sanchez",
+      "photo": "https://avatars.mds.yandex.net/i?id=4e68f88e184e849378b3acecc8434f0a75709747-5110375-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 47
+    },
+    {
+      "email": "fkdj@gmail.com",
+      "password": "$2a$10$h4K0jsocy/bfr2jtSlWTHefQz0fsRBdfhGiDKblDATk9lEN6xKA/.",
+      "login": "Samuel Moran",
+      "photo": "https://avatars.mds.yandex.net/i?id=185b853791f5192027651375b208b0d3-5663611-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 48
+    },
+    {
+      "email": "fdsjfkd@gmail.com",
+      "password": "$2a$10$HQdvwwgfyCF/4EVQo8Obg.8o3ScC0ZqKesjyG5g/1DRtgN8FAXIF.",
+      "login": "Mario Hall",
+      "photo": "https://avatars.mds.yandex.net/i?id=d178f13c167a287e78958c64dba5e411-5451037-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 49
+    },
+    {
+      "email": "fjsdkfdsfkd@gmail.com",
+      "password": "$2a$10$fRo168aolKF9PtJI9JINM.FvDQNFDEZgWwy2ttHluIwEkq2wPFbLW",
+      "login": "William Jones",
+      "photo": "https://avatars.mds.yandex.net/i?id=ecbac98ed7ac46963f03e004f5cbf24e833a7265-4614369-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 50
+    },
+    {
+      "email": "fjsdkjf@gmail.com",
+      "password": "$2a$10$FH7YHEeSs8mSeedYhBBWIejd/HcnPI8uWn08thd6VOGPLv2bhooQG",
+      "login": "Jorge Miller",
+      "photo": "https://avatars.mds.yandex.net/i?id=b56aa2e532713497dc75ce2de0afd1d5-5280919-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 51
+    },
+    {
+      "email": "kfsdkjfdslk@gmail.com",
+      "password": "$2a$10$h3boE9XIu0tNhLPMxaobX.c.W1aFiGecxyPd66q.K8Ly1/xOx5ZoG",
+      "login": "Jose Barton",
+      "photo": "https://avatars.mds.yandex.net/i?id=ad859db58412b5e4b35481b57d454f4dac5cbab0-5232166-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 52
+    },
+    {
+      "email": "fsdffsd@gmail.com",
+      "password": "$2a$10$BykOif808REeCAiQ.xGEauD8rWRyILoTHHRJguWSvX7Xs/S3m4b8O",
+      "login": "Jose Barton",
+      "photo": "https://avatars.mds.yandex.net/i?id=0984d8a6e943d921807f44cbddc87d1c-5235576-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 53
+    },
+    {
+      "email": "sdf@gmai.com",
+      "password": "$2a$10$po93BlB/iKL7kiOzWEFepuzInP5rQY3Ez0nrf05TSOKW0H4rA0nby",
+      "login": "Данила Панкратов",
+      "photo": "https://avatars.mds.yandex.net/i?id=7f1d80ea8a0ebd8d2da3463a72385c36b6d54a71-8209975-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 54
+    },
+    {
+      "email": "fjsdfkjds@gmail.com",
+      "password": "$2a$10$cS/CFQ7RZoK.NTS5Tp5/suGz1J982X7Rx0ARJ8EjiqerrRC5zcuFa",
+      "login": "Софья Демина",
+      "photo": "https://avatars.mds.yandex.net/i?id=33ae7ee0b0b337cf3c2819db6ff09549e50f0263-6361230-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 55
+    },
+    {
+      "email": "kjfklsdjflkLfsdfdsf@gsdkgd",
+      "password": "$2a$10$JYqUqh6v3nqHF9sIPhfMWOnApUfGBCw9n80/FSGMjk73HNy.EXrMu",
+      "login": "Максим Гордеев",
+      "photo": "https://avatars.mds.yandex.net/i?id=0768381a08bc167019acb051190d43391546f191-4810024-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 56
+    },
+    {
+      "email": "jsdfksdf@gmail.com",
+      "password": "$2a$10$KS3lXqdh.Wjo0u/W0KDQr.t.gr8KMYIk40vN./OmAwYEwzrw3ZRPq",
+      "login": "Всеволод Куприянов",
+      "photo": "https://avatars.mds.yandex.net/i?id=af57db10b0a22c70020bbaf5e87224013f67e4e9-8219252-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 57
+    },
+    {
+      "email": "fdskjfjasdfkl@gmail.com",
+      "password": "$2a$10$Snza9xZBfKpWrUkHiMUwk.NkltCkP4gb9ZTKQwo5cSejCnSdXiri2",
+      "login": "Лев Меркулов",
+      "photo": "https://avatars.mds.yandex.net/i?id=b830ab17ae9e71e7c436eb886c1ce265f6de15f4-4856833-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 58
+    },
+    {
+      "email": "fnsdfsdjf@gmail.com",
+      "password": "$2a$10$yuqluP9ATavhPeTFbORNUONrLR.kKjN3dYvMwQ7a4kBNne9Md/gFW",
+      "login": "Матвей Зайцев",
+      "photo": "https://avatars.mds.yandex.net/i?id=4b89579d32db4aa68028744ec3b9dc86a5d40817-7754520-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 59
+    },
+    {
+      "email": "fdklsjfklsdj@gmail.com",
+      "password": "$2a$10$H0/qoP.e9/MezHWqMbpc8Og8H.1VhaPT8JkamFuiIQ03n.2buulYK",
+      "login": "Руслан Карпов",
+      "photo": "https://avatars.mds.yandex.net/i?id=a466ba99c90048e9916754c5c8f804e2225e1831-7763602-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 60
+    },
+    {
+      "email": "fdskfjdk@gmail.com",
+      "password": "$2a$10$i6KG1lqXktAaWyhsmNSiuuRNlTftyJ5.RqH3OQxfUSbBHP7hH0pE6",
+      "login": "Демид Фомин",
+      "photo": "https://avatars.mds.yandex.net/i?id=53c5d622e0aeb260f9529233def8f9e5-4580593-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 61
+    },
+    {
+      "email": "dfksdjfdksj@gmail.com",
+      "password": "$2a$10$IqB3A.1iHOevPG08GUPKL.oS6Jl3asUV7VSXYvULXCHJ3oGAtq4cy",
+      "login": "Егор Карасев",
+      "photo": "https://avatars.mds.yandex.net/i?id=e4e9ce94140f22f43945ae734f8434c00c0e37ac-6361230-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 62
+    },
+    {
+      "email": "fjdskfjsd@gmail.com",
+      "password": "$2a$10$Tr3E7E4x9cM6Jk7xpyfRB.DiO6b6BQEmLeD5GUtw1m9igv60d7CR.",
+      "login": "Дарья Егорова",
+      "photo": "https://avatars.mds.yandex.net/i?id=4b36eee7d7d2dfd0d55f56959250fe36f79ff335-8231149-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 63
+    },
+    {
+      "email": "fsdjfskdjf@gmail.com",
+      "password": "$2a$10$mFWKKDYk5vR0TuogEfsuzuBpnBdMlrP0YTkTaQU0WeUqSMQMLNTju",
+      "login": "Александра Новикова",
+      "photo": "https://avatars.mds.yandex.net/i?id=bfa13a1bc2d4d65efede6df12eceeddd617f947d-6887327-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 64
+    },
+    {
+      "email": "sd@gmail.com",
+      "password": "$2a$10$80ccntHIIGAF9nxZ.2tGSuitgA.6pjJ8jujsuykizM29LDpyEWFkm",
+      "login": "Андрей Потапов",
+      "photo": "https://avatars.mds.yandex.net/i?id=2db77877967579e09b7a27b042508936-5288900-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 65
+    },
+    {
+      "email": "kfjkdsjf@gmafsd",
+      "password": "$2a$10$VA1o7ttH6yzKBqMVLQkIdOuDtL73tCfrOjP6O20O72.xIqhJrj5re",
+      "login": "Андрей Потапов",
+      "photo": "https://avatars.mds.yandex.net/i?id=fa70e11ea9b506ec7a18e00c9c7f0ea65864aba6-8200978-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 66
+    },
+    {
+      "email": "gjdfkgfjg@fsdf",
+      "password": "$2a$10$2RoutoTmgW.ImiJqBPrBxO.FPdiz/2VYpoH.zNaxDyKtLr9ULEfGm",
+      "login": "Ника Наумова",
+      "photo": "https://avatars.mds.yandex.net/i?id=a90a26bc2355e672b5ee604463dd9e96907ece4b-8211189-images-thumbs&n=13",
+      "favorites": [],
+      "status": "guest",
+      "id": 67
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "$2a$10$L1xI/zmDhv.PkPO4tNHiV.Ry2Ql3ZXpRhQJyT0UQzSippQA4kJqEa",
+      "login": "akram",
+      "photo": "fkdslkfsdf'",
+      "favorites": [],
+      "status": "guest",
+      "id": 68
+    },
+    {
+      "email": "afdsjfk@gmail.com",
+      "password": "$2a$10$E5DnET5xcGI/48mOcofStuIuwfLG.giJft7mugsDJCDy7iUfICOcC",
+      "login": "Umar",
+      "photo": "kkgdfg",
+      "favorites": [],
+      "status": "guest",
+      "id": 69
+    },
+    {
+      "email": "umar2@gmail.com",
+      "password": "$2a$10$bPNC9eoLBBr1P.TdZLEtiujkjQiD3bTyZx3jkBm/2L7AQtzfE3Jdy",
+      "login": "Umar",
+      "photo": "kglkf'dl;gk'dsf",
+      "favorites": [],
+      "status": "guest",
+      "id": 70
+    },
+    {
+      "email": "umar3@gmail.com",
+      "password": "$2a$10$ZRk37Q1c7oxce/4py/VX8OAY3MJwAsUWZjGJqs1MeRkfXDv4maeMW",
+      "login": "Umar",
+      "photo": "",
+      "favorites": [],
+      "status": "guest",
+      "id": 71
     }
   ],
   "posts": [
-    {
-      "img": "https://www.charitynavigator.org/content/dam/cn/cn/causes/stop-gun-violence.png/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-      "title": "Gun Violence Prevention and Victim Support",
-      "descr": "jflsdkjf",
-      "statusUser": "guest",
-      "create_ad": "Thu Dec 01 2022 23:55:10 GMT+0600 (Киргизия)",
-      "id": 1
-    },
     {
       "img": "https://www.charitynavigator.org/content/dam/cn/cn/causes/Native%20American%20Man.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
       "title": "Indigenous Peoples and Native-Led Charities",
@@ -218,51 +535,87 @@
       "id": 10
     },
     {
-      "img": "1",
-      "title": "1",
-      "descr": "",
+      "img": "https://24.kg/files/media/281/281818.jpg",
+      "title": "COVID-19 в мире. Заразились более 646,9 миллиона, умерли более 6,6 миллиона",
+      "descr": "Всего в мире с начала пандемии коронавирусом заразились 646 миллионов 957 тысяч 351 человек. Больше всего в США (99 миллионов 230 тысяч 725), Индии (44 миллиона 673 тысячи 949), Бразилии (35 миллионов 396 тысяч 191), Франции (38 миллионов 461 тысяча 21), Великобритании (24 миллиона 252 тысячи 201), России (21 миллион 329 тысяч 68), Турции (16 миллионов 919 тысяч 638), Аргентине (9 миллионов 739 тысяч 856), Иране (7 миллионов 559 тысяч 958), Колумбии (6 миллионов 314 тысяч 107), Испании (13 миллионов 614 тысяч 807), Италии (24 миллиона 488 тысяч 80) и Германии (36 миллионов 649 тысяч 979).",
       "statusUser": "guest",
-      "create_ad": "Sat Dec 10 2022 22:44:41 GMT+0600 (Киргизия)",
-      "id": 11
+      "create_ad": "Wed Dec 14 2022 16:09:35 GMT+0600 (Киргизия)",
+      "id": 12
+    },
+    {
+      "img": "https://24.kg/thumbnails/9ed58/4b403/281736_w263_h198.jpg",
+      "title": "Вейпы, IQOS, сигареты: специалист опровергает мифы о безвредности",
+      "descr": "Врач-пульмонолог, кандидат медицинских наук Анара Калиева рассказала 24.kg, к чему может привести курение электронных видов сигарет и как помочь человеку бросить курить.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:10:49 GMT+0600 (Киргизия)",
+      "id": 13
+    },
+    {
+      "img": "https://24.kg/thumbnails/632c5/a9610/281861_w263_h198.jpg",
+      "title": "Запрет на мирные собрания. Когда верхи не хотят слышать низы",
+      "descr": "Запрет на митинги в Бишкеке продлен до 31 декабря 2022 года. Решение принял Первомайский районный суд. Нельзя проводить мирные акции протеста и шествия в центре столицы. Одновременно расширяется и периметр моратория. Запрет распространяется на бульвар Эркиндик (от улицы Линейной до проспекта Чуй. — Прим. 24.kg).",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:11:36 GMT+0600 (Киргизия)",
+      "id": 14
+    },
+    {
+      "img": "https://24.kg/thumbnails/d707b/b2ef6/282342_w263_h198.jpg",
+      "title": "Курс доллара в коммерческих банках Кыргызстана на 14 декабря",
+      "descr": "Курсы указаны для наличного обмена валютой. Данные получены с сайтов коммерческих банков. В случае возникновения вопросов о предоставленных сведениях следует обращаться непосредственно в комбанки.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:11:55 GMT+0600 (Киргизия)",
+      "id": 15
+    },
+    {
+      "img": "https://24.kg/thumbnails/71c22/87d26/282122_w263_h198.jpg",
+      "title": "Нацбанк выпустил две новые коллекционные монеты. Они необычной формы",
+      "descr": "С 12 декабря 2022 года в обращение вводятся две новые коллекционные монеты — «Азиатские игры» серии «Спорт» и «Барбарис кашгарский» серии «Красная книга Кыргызстана». Об этом сообщается на сайте Национального банка.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:12:13 GMT+0600 (Киргизия)",
+      "id": 16
+    },
+    {
+      "img": "https://images.sparrow.ru/original/d5/d213/d242/5213242.jpeg",
+      "title": "Цены все выше. В Кыргызстане продолжают дорожать продукты",
+      "descr": "Жить в Кыргызстане становится с каждым днем все дороже. Не спасает повышение пособий, пенсий и заработных плат бюджетникам. Ведь рост цен значительно опережает как рост экономики, так и доходы населения.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:12:39 GMT+0600 (Киргизия)",
+      "id": 17
+    },
+    {
+      "img": "https://24.kg/thumbnails/aa6c9/b22e9/282032_w263_h198.png",
+      "title": "Продуктовая корзина Бишкека на 10 декабря. Сколько денег семья тратит на еду",
+      "descr": "Мы еженедельно ходим в один и тот же супермаркет и отслеживаем цены на один и тот же набор продуктов. Ниже приведена полная раскладка, какие продукты попали в нашу корзину и почему.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:13:01 GMT+0600 (Киргизия)",
+      "id": 18
+    },
+    {
+      "img": "https://images.sparrow.ru/original/d5/d208/d448/5208448.jpeg",
+      "title": "Кадры Садыра Жапарова: кто из ставленников власти оказался фигурантом дел",
+      "descr": "После смены власти в Кыргызстане два года назад за все происходящее в республике отвечает лично президент. Именно он возглавляет исполнительную ветвь власти. В том числе и назначает чиновников на руководящие посты.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:14:03 GMT+0600 (Киргизия)",
+      "id": 19
+    },
+    {
+      "img": "https://24.kg/thumbnails/0c9af/dd89a/282226_w263_h198.jpg",
+      "title": "Рост ОРВИ. Минздрав решает вопрос о карантине",
+      "descr": "Министр здравоохранения Гульнара Баатырова ответила, что посетила детскую больницу. Глава ведомства признала рост заболеваемости ОРВИ среди детей.",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 16:14:28 GMT+0600 (Киргизия)",
+      "id": 20
+    },
+    {
+      "img": "kgj;ldkfjg",
+      "title": "gdjfkljglds",
+      "descr": "gdfj;lgjdklf",
+      "statusUser": "guest",
+      "create_ad": "Wed Dec 14 2022 19:43:00 GMT+0600 (Киргизия)",
+      "id": 21
     }
   ],
   "donations": [
-    {
-      "img": "",
-      "title": "hi",
-      "descr": "",
-      "price": "",
-      "time": "",
-      "category": "disasters",
-      "id": 2
-    },
-    {
-      "img": "https://files.globalgiving.org/pfil/57227/pict_large.jpg?m=1663599485000",
-      "title": "",
-      "descr": "",
-      "price": "",
-      "time": "",
-      "category": "disasters",
-      "id": 4
-    },
-    {
-      "img": "https://i.natgeofe.com/n/90649fad-bef9-493a-8475-ac13395e3b1a/01-poached-nationalgeographic_1511810_4x3.jpg",
-      "title": "",
-      "descr": "полва плоаывжолпд овадп ",
-      "price": "",
-      "time": "",
-      "category": "poaching",
-      "id": 11
-    },
-    {
-      "img": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ORVYWNABUUI6VA2BZQ644UXH3Y.jpg&w=916",
-      "title": "Taking steps to establish a National Volunteer Care Corps to help older adults",
-      "descr": "Imagine a government program that would mobilize volunteers to help older adults across the nation age in place. One is on the way.Imagine a government program that would mobilize volunteers to help older adults across the nation age in place. One is on the way.",
-      "price": "5000$",
-      "time": "2023-04-06",
-      "category": "elderly",
-      "id": 12
-    },
     {
       "img": "https://www.usnews.com/object/image/00000184-e96f-d3de-a98c-fd7f9be60000/9b75f53f40c144e1af4253d95ad86753Hurricanes_Shipwreck_97662.jpg?update-time=1670361057000&size=responsive970",
       "title": "Florida Beach Erosion Uncovers Wooden Ship From 1800s",
@@ -271,15 +624,6 @@
       "time": "2023-02-10",
       "category": "disasters",
       "id": 13
-    },
-    {
-      "img": "https://www.usnews.com/news/best-states/florida/articles/2022-12-06/florida-lawmakers-set-to-meet-on-ailing-insurance-market",
-      "title": "Florida Lawmakers Set to Meet on Ailing Insurance Market",
-      "descr": "The Florida Legislature will meet next week for a special session on property insurance and property tax relief in the wake of damage caused by Hurricane Ian",
-      "price": "90000",
-      "time": "2022-12-30",
-      "category": "disasters",
-      "id": 14
     },
     {
       "img": "https://www.usnews.com/object/image/00000184-e88e-d3de-a98c-fdbe5f9a0000/3b435cbda1084090bd92cfa52cab9b91Italy_Landslide_14993.jpg?update-time=1670346180000&size=responsive970",
@@ -300,15 +644,6 @@
       "id": 16
     },
     {
-      "img": "",
-      "title": "",
-      "descr": "",
-      "price": "",
-      "time": "",
-      "category": "disasters",
-      "id": 17
-    },
-    {
       "img": "https://www.usnews.com/object/image/00000184-cf60-d785-afc5-cffaa72f0000/ea648fc466c048678e45380f52d658c4Sierra_Storm_88303.jpg?update-time=1669921165000&size=responsive970",
       "title": "2 Feet of Snow in Tahoe Mountains; More on the Way Saturday",
       "descr": "RENO, Nev. (AP) — The second of back-to-back winter storms was making its way Friday toward the Sierra Nevada, where up to 2 feet (61 centimeters) of snow already has fallen on the mountains around Lake Tahoe — much to the delight of area ski resorts.  Mountain highways reopened under sunny skies Friday and classes resumed two hours late at schools around the lake where they were closed on Thursday.",
@@ -318,13 +653,124 @@
       "id": 18
     },
     {
-      "img": "war ",
-      "title": "",
-      "descr": "",
-      "price": 0,
-      "time": "",
+      "img": "https://www.minfin.kg/storage/files/shares/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/res_44260bedf6d19ab224ed1129c0061666.png",
+      "title": "Специальный счёт для пострадавших граждан в Баткенской области",
+      "descr": "На спец счёт открытый для пострадавших граждан в Баткенской области поступило 338 329 999,67 сомов Израсходовано 148 758 177,62 сомов Неиспользованный остаток составляет 194 470 015,03 сомов (с учётом остатка от прошлого года в сумме 4 898 192,97 сомов)",
+      "price": "400000000",
+      "time": "2023-01-13",
       "category": "war",
       "id": 19
+    },
+    {
+      "img": "https://www.minfin.kg/storage/files/shares/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/res_ab2316d03f695fc3400960fa564d8cc0.png",
+      "title": "Господдержка баткенских предпринимателей",
+      "descr": "Поддержка Баткенской области в части льготного кредитования Финансово-кредитным Фондом при Министерстве финансов КР",
+      "price": "250000",
+      "time": "2023-01-06",
+      "category": "war",
+      "id": 20
+    },
+    {
+      "img": "https://www.minfin.kg/storage/files/shares/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/res_31dbfe24e36f4eb7f201fe0b43a95b90.png",
+      "title": "О межбюджетных трансфертах по Баткенской области на 2022 год",
+      "descr": "Целевые трансферты на выплату заработной платы работникам Национального статистического комитета\t",
+      "price": "95000",
+      "time": "20022-12-12",
+      "category": "",
+      "id": 21
+    },
+    {
+      "img": "https://rayfund.ru/wp-content/uploads/2022/11/pic0334_01-745x420.jpg",
+      "title": "Почти тонна корма от Farmina Pet Foods для бездомных животных!  Источник: https://rayfund.ru/pochti-tonna-korma-ot-farmina-pet-foods-dlya-bezdomnyh-zhivotnyh/ Все права защищены © Фонд помощи бездомным животным \"РЭЙ\"",
+      "descr": "В прошлом месяце компания Farmina Pet Foods передала в приюты очень ценный подарок — 940 кг сухого корма для собак и кошек, в том числе ветеринарные диеты. Полученная помощь была направлена в приюты «Джимми» и «Беригиня».  Источник: https://rayfund.ru/pochti-tonna-korma-ot-farmina-pet-foods-dlya-bezdomnyh-zhivotnyh/ Все права защищены © Фонд помощи бездомным животным \"РЭЙ\"",
+      "price": "10500",
+      "time": "2022-12-31",
+      "category": "animals",
+      "id": 22
+    },
+    {
+      "img": "https://rayfund.ru/wp-content/uploads/2022/11/pic0334_02.jpg",
+      "title": "Почти тонна корма от Farmina Pet Foods для бездомных животных!  Источник: https://rayfund.ru/pochti-tonna-korma-ot-farmina-pet-foods-dlya-bezdomnyh-zhivotnyh/ Все права защищены © Фонд помощи бездомным животным \"РЭЙ\"",
+      "descr": "Мы от всей души благодарим компанию Farmina Pet Foods за заботу о животных и регулярную поддержку нашего фонда!  Источник: https://rayfund.ru/pochti-tonna-korma-ot-farmina-pet-foods-dlya-bezdomnyh-zhivotnyh/ Все права защищены © Фонд помощи бездомным животным \"РЭЙ\"",
+      "price": "5000",
+      "time": "2200-03-12",
+      "category": "animals",
+      "id": 23
+    },
+    {
+      "img": "https://dobrovmeste.ru/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOTRLQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14860cff0780068b01c9fd2909b0214e89c042df/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVU9oQmhkWFJ2WDI5eWFXVnVkRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--af9952610aee65bed5bfdcdc78711abc68bb1fac/20221108_194333.jpg",
+      "title": "РОШЕЛЬ",
+      "descr": "ДРУЗЬЯ У НАС СРОЧНЫЙ СБОР НА ОПЕРАЦИИ (всего три ) НА УХЕ ЭНДОСКОПОМ 🙏  У РОШЕЛЬ ((сейчас зову ее МУСЯ) ",
+      "price": "10000",
+      "time": "2022-09-09",
+      "category": "animals",
+      "id": 24
+    },
+    {
+      "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17738/production/_127765069_hi001012858.jpg.webp",
+      "title": "Men sentenced for using dogs to hunt wild hares in Angus",
+      "descr": "Alexander Stewart, 35, from Aberdeen, was given a community payback order with 100 hours of unpaid work, and Jackie Stewart, 42, from Fife, was fined £1,000.",
+      "price": "85000",
+      "time": "2023-01-01",
+      "category": "poaching",
+      "id": 25
+    },
+    {
+      "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/5832/production/_126187522_rhinogetty.jpg.webp",
+      "title": "Kenya: Wildlife trafficking suspect seized after $1m reward",
+      "descr": "Kenyan police have arrested a man suspected of links to a transnational wildlife and drug trafficking syndicate who was indicted in a US court.",
+      "price": "20000",
+      "time": "2022-04-20",
+      "category": "poaching",
+      "id": 26
+    },
+    {
+      "img": "jkjglkdf",
+      "title": "gfdjlksjg",
+      "descr": "gkdf;kg",
+      "price": "200",
+      "time": "2022-12-24",
+      "category": "disasters",
+      "id": 27
+    },
+    {
+      "img": "https://chance.su/uploads/posts/2020-07/1595190758_volontyorskiy-proekt-my-ryadom-pomogaet-pozhilym-lyudyam-v-min.jpg",
+      "title": "Социальная интеграция детей в трудной жизненной ситуации на базе Детского Кризисного Центра НОКП КР в г.Кара-Балта",
+      "descr": "Данный департамент нацелен на оказание поддержки уязвимым группам населения через удовлетворение первостепенных потребностей, таких как питание и кров, а также профессиональной, социальной и психологической помощи людям, оказавшимся в трудной жизненной ситуации по всей стране.",
+      "price": "10000",
+      "time": "2022-12-22",
+      "category": "elderly",
+      "id": 28
+    }
+  ],
+  "emailnews": [
+    {
+      "id": 1,
+      "email": "0@gmail.com"
+    },
+    {
+      "email": "bishkek@gmail.com",
+      "id": 2
+    },
+    {
+      "email": "bishkek@gmail.com",
+      "id": 3
+    },
+    {
+      "email": "e@gmail.com",
+      "id": 4
+    },
+    {
+      "email": "",
+      "id": 5
+    },
+    {
+      "email": "email.com",
+      "id": 6
+    },
+    {
+      "email": "jsfkdjsfk@gmail.com",
+      "id": 7
     }
   ]
 }

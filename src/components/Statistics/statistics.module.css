@@ -1,0 +1,15 @@
+.wrapper {
+    background-color: #1976d2;
+}
+
+.content {
+    padding: 50px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+}
+

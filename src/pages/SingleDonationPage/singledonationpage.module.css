@@ -43,3 +43,21 @@
 .btnWrapper {
     margin-top: 15px;
 }
+
+.info h2 {
+    margin-bottom: 20px;
+}
+
+.descr {
+    margin-bottom: 10px;
+    opacity: 90%;
+}
+
+.price {
+    margin-bottom: 5px;
+    color: green;
+}
+
+.date {
+    color: #1976d2;
+}

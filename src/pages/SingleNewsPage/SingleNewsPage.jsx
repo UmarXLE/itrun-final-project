@@ -11,6 +11,14 @@ import styles from './singlepostpage.module.css'
 import Footer from '../../components/Footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNews } from '../../redux/newsSlice';
+import MuiAlert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import {MdFavorite} from 'react-icons/md'
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  
 
 const SingleNewsPage = (props) => {
     const paramsURL = useParams()
@@ -26,7 +34,8 @@ const SingleNewsPage = (props) => {
     const [open , setOpen ] = useState(false)
     const [comments , setComments ] = useState('')
     const navigate = useNavigate()
-
+    const [saveMove , setSaveMove] = useState(false)
+    const [favoriteMove ,setFavoriteMove] = useState(false)
     
 
     useEffect(() => {
@@ -64,29 +73,21 @@ const SingleNewsPage = (props) => {
             console.log(res.data)
             setNews(res.data)
             setEditMode(false)
+            setSaveMove(true)
         })
     }
 
 
-    const handleClose = () => {
-        setOpen(false)
-    }
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setFavoriteMove(false);
+        setSaveMove(false)
+      };
 
 
-    const action = (
-        <React.Fragment>
-
-          <IconButton
-            size="small"
-            aria-label="close"
-            color="inherit"
-            onClick={handleClose}
-          >
-            Закрыть 
-          </IconButton>
-        </React.Fragment>
-      );
-     
     const user = useSelector(state => state?.user?.currentUser)
     
     const addFavoriteNews = () => {
@@ -95,7 +96,8 @@ const SingleNewsPage = (props) => {
         axios.patch(`http://localhost:3009/users/${user.id}`,{
             favorites: user.favorites.concat(Number(postId))
         }).then(
-            dispatch(addNews(news))
+            dispatch(addNews(news)),
+            setFavoriteMove(true)
         )  
         
     }
@@ -117,6 +119,20 @@ const SingleNewsPage = (props) => {
                 <h2>{news.title}</h2>                
                 <p>{news.descr}</p>
             </div>
+            {
+                    user?.status === 'guest' && <>
+                      <Button 
+                    // variant="contained"
+                    // color="error"
+                    style={{'marginLeft':'10px'}}
+                    onClick ={addFavoriteNews}
+                    ><MdFavorite style={{
+                        position:'absolute',
+                        right:'0'
+                    }} className={styles.favoriteAddBtn}/></Button>
+
+                    </>
+                }
         </div>
 
             {
@@ -177,11 +193,11 @@ const SingleNewsPage = (props) => {
                     >Delete</Button>
 
                     <Button 
-                    variant="contained"
-                    color="error"
+                    // variant="contained"
+                    // color="error"
                     style={{'marginLeft':'10px'}}
                     onClick ={addFavoriteNews}
-                    >add to favorite</Button>
+                    ><MdFavorite className={styles.favoriteAddBtn}/></Button>
 
                 </div>
                         </>
@@ -189,6 +205,7 @@ const SingleNewsPage = (props) => {
                 }
                 </>
             }
+
 
                
 
@@ -214,14 +231,39 @@ const SingleNewsPage = (props) => {
 
           
            
+<Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={saveMove} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+            Тews successfully changed!
+        </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
 
-<Snackbar
-        open={open}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        message={<p style={{'color':'green'}}>News success create ! </p>}
-        action={action}
-      />
+
+        
+           
+    <Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={favoriteMove} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
+            news added to favorites !
+        </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
+
 
         
         <Footer />

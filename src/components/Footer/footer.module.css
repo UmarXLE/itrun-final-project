@@ -14,4 +14,12 @@
 
 .icon {
     margin: 0 10px;
+    font-size: 20px;
+}
+
+.icon:hover {
+    transition: 0.25s ease all;
+    /* font-size: 25px; */
+    cursor: pointer;
+    color: #1976d2;
 }

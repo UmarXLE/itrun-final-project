@@ -11,7 +11,7 @@
 }
 
 .title {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .icon {
@@ -19,5 +19,6 @@
 }
 
 .subTitle {
-    margin-top: 15px;
+    margin-top: 10px;
+    color: black;
 }

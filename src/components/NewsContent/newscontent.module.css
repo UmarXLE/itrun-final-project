@@ -18,7 +18,7 @@
 .link {
     text-decoration: none;
     color: white;
-    background-color: #49516f;
+    background-color: #1976d2;
     padding: 8px 15px;
     border-radius: 8px;
     font-weight: 500;
@@ -39,4 +39,14 @@
     /* flex-direction: column; */
     width: 100%;
     justify-content: center;
+}
+
+
+@media (max-width:576px) {
+    .infoTitle {
+        flex-direction: column;
+    }
+    .title {
+        margin-bottom: 30px;
+    }
 }

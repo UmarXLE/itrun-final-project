@@ -31,6 +31,8 @@ const DonationPage = () => {
     const [loading , setLoading ] = useState(true)
     const [ currentPage , setCurrentPage ] = useState(1)
     const [ perPage] = useState(3)
+
+    const [ filteredArray,setFilteredArray ]= useState(donations) 
     
 
     const outerTheme = createTheme({
@@ -63,15 +65,18 @@ const DonationPage = () => {
         axios.get(`http://localhost:3009/donations`)
         .then(res => {
             setDonations(res.data)
-            setFilteredDonations(res.data)
-            
+            setFilteredArray(res.data)
         })
     },[])
 
     const handleFilter = (status) => {
         console.log(status)
         if(status == 'all') {
-            setCurrentPage(donations)
+            setFilteredArray(donations)
+        }else{
+            let newArray = [...donations].filter(item => item.category === status)
+            console.log(status)
+            setFilteredArray(newArray)
         }
     }
 
@@ -130,7 +135,7 @@ const DonationPage = () => {
                             </Box>
                     </>):(<>
                         {
-                    currentPageNow.map(donate => {
+                    filteredArray.map(donate => {
                         return <DonationItem
                         id = {donate.id}
                         key = {donate.id}
@@ -164,7 +169,7 @@ const DonationPage = () => {
                 
 
             </div>
-            <div className ={styles.paginationWrapper}>
+            {/* <div className ={styles.paginationWrapper}>
             <button onClick = {()=>prevPage()}><IoIosArrowBack/></button>
                 <PaginationComponent 
                 perPage = {perPage} 
@@ -172,7 +177,7 @@ const DonationPage = () => {
                 paginate = { paginate}
                 />
                 <button onClick = {()=>nextPage()}><IoIosArrowForward /></button>
-            </div>
+            </div> */}
         <Footer />
          </div>     
     );

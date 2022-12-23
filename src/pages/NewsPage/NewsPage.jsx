@@ -22,7 +22,7 @@ const NewsPage = () => {
     const [loading , setLoading ] = useState(true)
     const [sorted , setSorted ]  = useState('new')
     const [ currentPage , setCurrentPage ] = useState(1)
-    const [ perPage] = useState(3)
+    const [ perPage] = useState(6)
 
 
     const lastIndex = currentPage * perPage

@@ -12,6 +12,14 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import { useSelector } from 'react-redux';
+import MuiAlert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 
 const CreateNewsPage = () => {
 
@@ -50,9 +58,13 @@ const CreateNewsPage = () => {
         })
     }
 
-    const handleClose = () => {
-        setOpen(false)
-    }
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+  
+      setOpen(false);
+    };
 
     
 
@@ -75,7 +87,7 @@ const CreateNewsPage = () => {
 
     return (
 
-        <div>
+        <div className={styles.container}>
             <BreadCrums title='Create News'/>  
             <div className={styles.wrapper}>
             <form className={styles.form}>
@@ -113,14 +125,20 @@ const CreateNewsPage = () => {
                 }}
                 onClick={createNews}
                 >Create News</Button>
-
-<Snackbar
-        open={open}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        message={<p style={{'color':'green'}}>News success create ! </p>}
-        action={action}
-      />
+<Stack spacing={2} sx={{ width: '100%' }}>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Open success snackbar
+      </Button> */}
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+        The news has been successfully created!
+        </Alert>
+      </Snackbar>
+      {/* <Alert severity="error">This is an error message!</Alert>
+      <Alert severity="warning">This is a warning message!</Alert>
+      <Alert severity="info">This is an information message!</Alert> */}
+      {/* <Alert severity="success">This is a success message!</Alert> */}
+    </Stack>
 
             </form>
             </div>  

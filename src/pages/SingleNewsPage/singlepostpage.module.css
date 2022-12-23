@@ -32,3 +32,22 @@
     display: flex;
     justify-content: end;
 }
+
+.favoriteAddBtn {
+    font-size: 30px;
+    color: red;
+}
+
+.favoriteAddBtn:hover ,
+.favoriteAddBtn:focus{
+    color: #1976d2;
+    /* transition: 1s; */
+}
+
+.infoWrapper h2{
+    margin-bottom: 20px;
+}
+
+.infoWrapper p {
+    opacity: 80%;
+}
