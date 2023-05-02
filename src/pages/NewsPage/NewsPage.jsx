@@ -63,13 +63,9 @@ const NewsPage = () => {
     }
 
 
-
-
         const handleChange = (e) => {
             setSorted(e.target.value)
         };
-
-
 
     return (
         <div>

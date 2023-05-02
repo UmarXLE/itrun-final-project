@@ -4,7 +4,6 @@
     width: 90%;
     margin: 50px auto;
     justify-content: center;
-    /* padding-top: 100px; */
 }
 
 .filterNews {
@@ -24,7 +23,6 @@
 .paginationWrapper {
     width: 50%;
     margin: auto;
-    /* margin: 30px auto; */
     display: flex;
     justify-content: center;
     align-items: center;

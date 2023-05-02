@@ -24,7 +24,7 @@ const UserPages = () => {
     const filteredUsers = users.filter(user => {
         return user.login.toLowerCase().includes(value.toLocaleLowerCase())
     })
-
+    
 
 
     return (

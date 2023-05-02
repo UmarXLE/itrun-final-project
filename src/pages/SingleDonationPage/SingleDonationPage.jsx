@@ -36,7 +36,7 @@ const SingleDonationPage = (props) => {
         axios.get(`http://localhost:3009/donations/${id}`)
             .then(res => setDonate(res.data))
     },[])
-
+    
     const handleDelete = () => {
         axios.delete(`http://localhost:3009/donations/${id}`)
             .then(res => {

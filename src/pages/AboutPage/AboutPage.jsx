@@ -5,7 +5,6 @@ import CardAbout from '../../components/CardAbout/CardAbout';
 import DonationFindInfo from '../../components/DonationFindInfo/DonationFindInfo';
 import Letter from '../../components/Letter/Letter';
 import styles from './aboutpage.module.css'
-// import joinIcon from 'img/about.jpeg'
 import Footer from '../../components/Footer/Footer'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -62,7 +61,7 @@ const AboutPage = () => {
 
             <DonationFindInfo styles={styles}/>
 
-            
+
 
             <div className={styles.cardAboutWrapper}>
 
